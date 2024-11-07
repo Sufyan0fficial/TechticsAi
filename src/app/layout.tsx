@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Michroma, Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const michroma = Michroma({
@@ -30,8 +31,11 @@ export default function RootLayout({
       <body
         className={`${inter.className} ${montserrat.variable} ${michroma.variable}`}
       >
-        <Header />
-        {children}
+        <div className="bg-gradient-to-b from-[#060A30] to-[#0416FE] flex flex-col min-h-screen">
+          <Header />
+          <div className="flex-grow">{children}</div>
+          <Footer />
+        </div>
       </body>
     </html>
   );
