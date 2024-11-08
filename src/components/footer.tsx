@@ -9,7 +9,7 @@ import Checkbox from "@mui/material/Checkbox";
 function Footer() {
   return (
     <div className="">
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
         <div className=" rounded-3xl bg-gradient-radial from-[#0242BA] to-[#001D56] p-12">
           {" "}
           <div className="flex justify-center items-center">
@@ -24,7 +24,7 @@ function Footer() {
             </div>
           </div>
           <div className="mt-6 flex items-start  md:justify-between justify-center gap-10 md:gap-0 flex-wrap">
-            <div className="lg:w-1/4  font-Michroma font-medium tracking-widest flex flex-col gap-4  text-sm md:w-1/2 w-full">
+            <div className="lg:w-1/4  font-Michroma font-medium tracking-widest flex flex-col gap-4  text-sm md:text-lg lg:text-xl md:w-1/2 w-full">
               <Link
                 href="/"
                 className="text-white hover:text-[#45E7FF] transition-colors duration-300 uppercase"
@@ -51,12 +51,12 @@ function Footer() {
               </Link>
             </div>
             <div className="lg:flex-grow flex flex-col items-start md:items-center md:w-1/2 w-full">
-              <h4 className=" text-sm text-white font-medium font-Michroma uppercase ">
+              <h4 className=" text-white font-medium font-Michroma uppercase text-sm md:text-lg lg:text-xl">
                 Follow us
               </h4>
-              <div className="flex gap-5 mt-6 ">
+              <div className="flex gap-5 mt-6 md:mt-10 ">
                 <Link href="/">
-                  <div className="md:w-[65px] md:h-[65px] w-[50px] h-[50px] relative">
+                  <div className="md:w-[75px] md:h-[75px] w-[50px] h-[50px] relative">
                     <Image
                       src="/instagram.svg"
                       alt="instagram"
@@ -67,7 +67,7 @@ function Footer() {
                   </div>
                 </Link>
                 <Link href="/">
-                  <div className="md:w-[65px] md:h-[65px] w-[50px] h-[50px] relative">
+                  <div className="md:w-[75px] md:h-[75px] w-[50px] h-[50px] relative">
                     <Image
                       src="/facebook.svg"
                       alt="facebook"
@@ -78,7 +78,7 @@ function Footer() {
                   </div>
                 </Link>
                 <Link href="/">
-                  <div className="md:w-[65px] md:h-[65px] w-[50px] h-[50px] relative">
+                  <div className="md:w-[75px] md:h-[75px] w-[50px] h-[50px] relative">
                     <Image
                       src="/twitter.svg"
                       alt="twitter"
@@ -89,7 +89,7 @@ function Footer() {
                   </div>
                 </Link>
                 <Link href="/">
-                  <div className="md:w-[65px] md:h-[65px] w-[50px] h-[50px] relative">
+                  <div className="md:w-[75px] md:h-[75px] w-[50px] h-[50px] relative">
                     <Image
                       src="/youtube.svg"
                       alt="youtube"
@@ -102,7 +102,7 @@ function Footer() {
               </div>
             </div>
             <div className="lg:w-1/4 flex flex-col md:gap-4 gap-2 md:w-1/2  w-full  md:mt-10 lg:mt-0">
-              <h4 className="font-Michroma  text-sm  uppercase font-thin">
+              <h4 className="font-Michroma   uppercase font-thin  mb-1 text-sm md:text-lg lg:text-xl">
                 Join our newsletter
               </h4>
               <div className="flex md:flex-col items-baseline  gap-4  md:gap-0 md:items-end">
@@ -139,14 +139,15 @@ function Footer() {
                 />
               </FormGroup>
             </div>
+
             <div className="flex flex-wrap w-full md:mt-10 mt-6 ">
-              <h3 className="font-Michroma text-[#54E8FF] w-full md:w-1/2 lg:w-1/3 md:text-start text-center">
+              <h3 className="font-Michroma text-[#54E8FF] w-full md:w-1/2 lg:w-1/3 md:text-start text-center lg:text-center text-sm md:text-lg lg:text-xl">
                 +92 302 5193299
               </h3>
-              <h3 className="font-Michroma text-white w-full md:w-1/2 lg:w-1/3 text-center ">
+              <h3 className="font-Michroma text-white w-full md:w-1/2 lg:w-1/3 text-center text-sm md:text-lg lg:text-xl">
                 contactus @techtics.ai
               </h3>
-              <h3 className="font-Michroma text-[#54E8FF] w-full md:w-1/2 lg:w-1/3 text-center md:text-start lg:text-center">
+              <h3 className="font-Michroma text-[#54E8FF] w-full md:w-1/2 lg:w-1/3 text-center md:text-start lg:text-center text-sm md:text-lg lg:text-xl">
                 NFC Society, Lahore
               </h3>
             </div>
@@ -154,15 +155,15 @@ function Footer() {
               <Image src="/divider.svg" alt="divider" fill />
             </div>
             <div className="flex flex-wrap w-full text-sm ">
-              <h3 className="font-Montserrat  w-full md:w-1/2 lg:w-1/3 md:text-start text-center">
+              <h3 className="font-Montserrat  w-full md:w-1/2 lg:w-1/3 md:text-start lg:text-center text-center text-lg">
                 Designed by: Vpixel Turkey
               </h3>
-              <h3 className="font-Montserrat w-full md:w-1/2 lg:w-1/3 text-center ">
+              <h3 className="font-Montserrat w-full md:w-1/2 lg:w-1/3 text-center text-lg">
                 © 2024 Techtics.ai All Rights Reserved.
               </h3>
               <Link
                 href="/"
-                className="font-Montserrat  w-full md:w-1/2 lg:w-1/3 text-center md:text-start lg:text-center hover:text-[#54E8FF]"
+                className="font-Montserrat  w-full md:w-1/2 lg:w-1/3 text-center md:text-start lg:text-center hover:text-[#54E8FF] text-lg"
               >
                 Terms & Conditions | Privacy policy
               </Link>

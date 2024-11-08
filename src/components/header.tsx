@@ -24,10 +24,10 @@ function Header() {
   }, []);
   return (
     <div
-      className={`h-24 flex items-center sticky inset-0 cursor-pointer border ${
+      className={`h-24 flex items-center sticky inset-0 cursor-pointer z-10 ${
         clicked &&
-        "!items-start min-h-screen py-6 bg-gradient-to-b from-[#060A30] to-[#0416FE]"
-      }  ${isscroll ? "bg-inherit" : "bg-transparent"}`}
+        "!items-start min-h-screen py-6 bg-gradient-to-b from-[#060A30] to-[#0416FE] !fixed z-20"
+      }  ${isscroll ? "bg-[#060A30]" : "bg-transparent"}`}
       onMouseEnter={() => setisscroll(true)}
       onMouseLeave={() => {
         if (window.scrollY < 60) {
