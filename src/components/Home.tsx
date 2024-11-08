@@ -76,7 +76,7 @@ function Home() {
                 </div>
               </div>
               <div className="w-full">
-                <h1 className="font-Michroma lg:text-4xl md:text-2xl text-lg  text-[#5EF5FF] text-center w-full">
+                <h1 className="font-Michroma lg:text-4xl md:text-2xl text-lg  text-[#5EF5FF] text-center w-full font-light">
                   50+
                 </h1>
                 <p className="font-Montserrat text-whtie font-semibold  uppercase tracking-widest md:mt-3 mt-2 text-center w-full md:text-2xl ">
@@ -104,7 +104,7 @@ function Home() {
                 </div>
               </div>
               <div className="w-full">
-                <h1 className="font-Michroma lg:text-4xl md:text-2xl text-lg  text-[#5EF5FF] text-center w-full">
+                <h1 className="font-Michroma lg:text-3xl md:text-2xl text-lg  text-[#5EF5FF] text-center w-full ">
                   10+ PHDS
                 </h1>
                 <p className="font-Montserrat text-whtie font-semibold  uppercase tracking-widest md:mt-3 mt-2 text-center w-full md:text-2xl ">
@@ -144,7 +144,7 @@ function Home() {
         </div>
 
         {/* business solutions */}
-        <div className="my-20">
+        <div className="md:mb-36 md:mt-48 my-20">
           <h2 className="font-Michroma text-[#45E7FF] lg:text-4xl md:text-2xl text-lg uppercase text-center">
             Business Solutions
           </h2>
@@ -191,8 +191,8 @@ function Home() {
                 >
                   <div className="relative lg:w-[110px] lg:h-[110px] md:w-[85px] md:h-[85px] w-[70px] h-[70px] ">
                     <Image
-                      src="/brain.svg"
-                      alt="brain"
+                      src="/eye.svg"
+                      alt="eye image"
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-center object-contain "
@@ -201,22 +201,22 @@ function Home() {
                 </div>
               </div>
             </div>
-            <ul className="md:flex justify-center items-center flex-wrap list-disc mt-6 hidden">
-              <li className="font-Montserrat font-medium w-1/2 text-end  pr-6 list-inside">
+            <ul className="flex justify-center items-center flex-wrap list-disc md:mt-6 ">
+              <li className="font-Montserrat font-medium md:w-1/2 w-full text-center md:text-end  md:pr-6 list-inside">
                 Hampden-Sydney College in Virginia
               </li>
 
-              <li className="font-Montserrat font-medium w-1/2 list-inside pl-4">
+              <li className="font-Montserrat font-medium md:w-1/2 w-full text-center md:text-start list-inside md:pl-4">
                 Hampden-Sydney College in Virginia
               </li>
-              <li className="font-Montserrat font-medium w-1/2  list-inside text-end pr-6">
+              <li className="font-Montserrat font-medium md:w-1/2 w-full  text-center list-inside md:text-end md:pr-6">
                 Hampden-Sydney College in Virginia
               </li>
-              <li className="font-Montserrat font-medium w-1/2 list-inside pl-4">
+              <li className="font-Montserrat font-medium md:w-1/2 w-full text-center md:text-start list-inside md:pl-4">
                 Hampden-Sydney College in Virginia
               </li>
             </ul>
-            <div className="md:w-1/3 flex justify-center items-center  md:mt-20 w-full">
+            <div className="md:w-1/3 flex justify-center items-center  md:mt-16 w-full">
               <div
                 className="lg:w-[220px] lg:h-[220px] md:w-[180px] md:h-[180px] w-[160px] h-[160px]  flex justify-center items-center"
                 style={{
@@ -228,8 +228,8 @@ function Home() {
               >
                 <div className="relative lg:w-[110px] lg:h-[110px] md:w-[85px] md:h-[85px] w-[70px] h-[70px] ">
                   <Image
-                    src="/brain.svg"
-                    alt="brain"
+                    src="/cloud.svg"
+                    alt="cloud memory"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-center object-contain "
