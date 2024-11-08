@@ -11,7 +11,7 @@ function Home() {
         <div
           style={{
             backgroundImage: `url('/heroimage.svg')`,
-            height: "90vh",
+            height: "calc(100vh - 96px)",
             width: "100%",
             backgroundSize: "cover",
             backgroundPosition: "center",
@@ -48,7 +48,7 @@ function Home() {
         </div>
 
         {/* team section */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 my-20">
           <h2 className="font-Michroma text-[#45E7FF] lg:text-4xl md:text-2xl text-lg uppercase text-center">
             Highly Regarded Team
           </h2>
@@ -58,7 +58,7 @@ function Home() {
           <div className="flex flex-wrap justify-center items-stretch gap-10 md:gap-0 md:mt-6 mt-2 ">
             <div className="lg:w-1/3 md:w-1/2 w-full  flex justify-center items-center flex-col md:gap-10 gap-6 ">
               <div
-                className="lg:w-[230px] lg:h-[230px] md:w-[170px] md:h-[170px] w-[120px] h-[120px] flex justify-center items-center "
+                className="lg:w-[200px] lg:h-[200px] md:w-[170px] md:h-[170px] w-[120px] h-[120px] flex justify-center items-center "
                 style={{
                   backgroundImage: `url('/frame.svg')`,
                   backgroundSize: "cover",
@@ -76,7 +76,7 @@ function Home() {
                 </div>
               </div>
               <div className="w-full">
-                <h1 className="font-Michroma lg:text-5xl md:text-3xl text-lg  text-[#5EF5FF] text-center w-full">
+                <h1 className="font-Michroma lg:text-4xl md:text-2xl text-lg  text-[#5EF5FF] text-center w-full">
                   50+
                 </h1>
                 <p className="font-Montserrat text-whtie font-semibold  uppercase tracking-widest md:mt-3 mt-2 text-center w-full md:text-2xl ">
@@ -86,17 +86,17 @@ function Home() {
             </div>
             <div className="lg:w-1/3 md:w-1/2 w-full  flex justify-center items-center flex-col md:gap-10 gap-6 ">
               <div
-                className="lg:w-[230px] lg:h-[230px] md:w-[170px] md:h-[170px] w-[120px] h-[120px] flex justify-center items-center"
+                className="lg:w-[200px] lg:h-[200px] md:w-[170px] md:h-[170px] w-[120px] h-[120px] flex justify-center items-center"
                 style={{
                   backgroundImage: `url('/frame.svg')`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
               >
-                <div className="relative w-[150px] lg:h-[154px]  md:h-[75px] h-[52px] ">
+                <div className="relative w-[140px] lg:h-[154px]  md:h-[75px] h-[52px] ">
                   <Image
                     src="/graduated.svg"
-                    alt="award"
+                    alt="graduated"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-center object-contain"
@@ -104,7 +104,7 @@ function Home() {
                 </div>
               </div>
               <div className="w-full">
-                <h1 className="font-Michroma lg:text-5xl md:text-3xl text-lg  text-[#5EF5FF] text-center w-full">
+                <h1 className="font-Michroma lg:text-4xl md:text-2xl text-lg  text-[#5EF5FF] text-center w-full">
                   10+ PHDS
                 </h1>
                 <p className="font-Montserrat text-whtie font-semibold  uppercase tracking-widest md:mt-3 mt-2 text-center w-full md:text-2xl ">
@@ -114,7 +114,7 @@ function Home() {
             </div>
             <div className="lg:w-1/3 md:w-1/2 w-full  flex justify-center items-center flex-col md:gap-10 gap-6 md:mt-10 lg:mt-0">
               <div
-                className="lg:w-[230px] lg:h-[230px] md:w-[170px] md:h-[170px] w-[120px] h-[120px] flex justify-center items-center"
+                className="lg:w-[200px] lg:h-[200px] md:w-[170px] md:h-[170px] w-[120px] h-[120px] flex justify-center items-center"
                 style={{
                   backgroundImage: `url('/frame.svg')`,
                   backgroundSize: "cover",
@@ -132,7 +132,7 @@ function Home() {
                 </div>
               </div>
               <div className="w-full">
-                <h1 className="font-Michroma lg:text-5xl md:text-3xl text-lg  text-[#5EF5FF] text-center w-full">
+                <h1 className="font-Michroma lg:text-4xl md:text-2xl text-lg  text-[#5EF5FF] text-center w-full">
                   150M+
                 </h1>
                 <p className="font-Montserrat text-whtie font-semibold  uppercase tracking-widest md:mt-3 mt-2 text-center w-full md:text-2xl ">
@@ -140,6 +140,104 @@ function Home() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* business solutions */}
+        <div className="my-20">
+          <h2 className="font-Michroma text-[#45E7FF] lg:text-4xl md:text-2xl text-lg uppercase text-center">
+            Business Solutions
+          </h2>
+          <div className="flex flex-wrap justify-center items-center   ">
+            <h3 className="font-Michroma w-full text-center uppercase mt-16 mb-2 md:hidden">
+              <span className="text-[#45E7FF]">Natural Language</span> <br />
+              <span>Processing</span>
+            </h3>
+            <div className="flex items-center justify-between w-full md:mt-20 ">
+              <div className="md:w-1/3 w-1/2 flex md:justify-center justify-start items-center">
+                <div
+                  className="lg:w-[220px] lg:h-[220px] md:w-[180px] md:h-[180px] w-[160px] h-[160px] flex justify-center items-center"
+                  style={{
+                    backgroundImage: `url('/boxframe.svg')`,
+                    backgroundSize: "cover",
+
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+                  <div className="relative lg:w-[110px] lg:h-[110px] md:w-[85px] md:h-[85px] w-[70px] h-[70px] ">
+                    <Image
+                      src="/brain.svg"
+                      alt="brain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-center object-contain "
+                    />
+                  </div>
+                </div>
+              </div>
+              <h3 className="font-Michroma lg:text-2xl md:text-lg  text-center uppercase md:w-1/3 hidden md:block">
+                <span className="text-[#45E7FF]">Natural Language</span> <br />
+                <span>Processing</span>
+              </h3>
+              <div className="md:w-1/3 w-1/2 flex md:justify-center justify-end  items-center">
+                <div
+                  className="lg:w-[220px] lg:h-[220px] md:w-[180px] md:h-[180px] w-[160px] h-[160px] flex justify-center items-center"
+                  style={{
+                    backgroundImage: `url('/boxframe.svg')`,
+                    backgroundSize: "cover",
+
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+                  <div className="relative lg:w-[110px] lg:h-[110px] md:w-[85px] md:h-[85px] w-[70px] h-[70px] ">
+                    <Image
+                      src="/brain.svg"
+                      alt="brain"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-center object-contain "
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul className="md:flex justify-center items-center flex-wrap list-disc mt-6 hidden">
+              <li className="font-Montserrat font-medium w-1/2 text-end  pr-6 list-inside">
+                Hampden-Sydney College in Virginia
+              </li>
+
+              <li className="font-Montserrat font-medium w-1/2 list-inside pl-4">
+                Hampden-Sydney College in Virginia
+              </li>
+              <li className="font-Montserrat font-medium w-1/2  list-inside text-end pr-6">
+                Hampden-Sydney College in Virginia
+              </li>
+              <li className="font-Montserrat font-medium w-1/2 list-inside pl-4">
+                Hampden-Sydney College in Virginia
+              </li>
+            </ul>
+            <div className="md:w-1/3 flex justify-center items-center  md:mt-20 w-full">
+              <div
+                className="lg:w-[220px] lg:h-[220px] md:w-[180px] md:h-[180px] w-[160px] h-[160px]  flex justify-center items-center"
+                style={{
+                  backgroundImage: `url('/boxframe.svg')`,
+                  backgroundSize: "cover",
+
+                  backgroundRepeat: "no-repeat",
+                }}
+              >
+                <div className="relative lg:w-[110px] lg:h-[110px] md:w-[85px] md:h-[85px] w-[70px] h-[70px] ">
+                  <Image
+                    src="/brain.svg"
+                    alt="brain"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-center object-contain "
+                  />
+                </div>
+              </div>
+            </div>
+            <div></div>
           </div>
         </div>
       </Container>
