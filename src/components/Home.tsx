@@ -1,6 +1,7 @@
 import { Container } from "@mui/material";
 import Image from "next/image";
 import React from "react";
+import heroimage from "../../public/heroimage.svg";
 import mainImage from "../../public/mainImage2.svg";
 import innovative from "../../public/innovativelogo.svg";
 import neuro from "../../public/neurologo.svg";
@@ -21,7 +22,7 @@ function Home() {
 
         <div
           style={{
-            backgroundImage: `url('/heroimage.svg')`,
+            backgroundImage: `url(${heroimage.src})`,
             height: "calc(100vh - 96px)",
             width: "100%",
             backgroundSize: "cover",
