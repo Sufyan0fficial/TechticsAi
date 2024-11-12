@@ -28,9 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} ${montserrat.variable} ${michroma.variable}`}
-      >
+      <body className={`${montserrat.className} ${michroma.variable}`}>
         <div className="bg-gradient-to-b from-[#060A30] to-[#0416FE] flex flex-col min-h-screen">
           <Header />
           <div className="flex-grow">{children}</div>
