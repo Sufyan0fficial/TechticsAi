@@ -10,7 +10,7 @@ function Footer() {
   return (
     <div className="">
       <Container maxWidth="xl">
-        <div className=" rounded-3xl bg-gradient-radial from-[#0242BA] to-[#001D56] p-12">
+        <div className=" rounded-3xl bg-[#001D56] p-12">
           {" "}
           <div className="flex justify-center items-center">
             <div className="relative md:w-[500px] md:h-[50px] w-[300px] h-[45px]  py-20">
