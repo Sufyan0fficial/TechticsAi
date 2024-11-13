@@ -52,7 +52,7 @@ function Home() {
                   mixBlendMode: "screen",
                   backgroundRepeat: "no-repeat",
                 }}
-                className="w-1/2 md:w-1/3 h-[252px]  aspect-square border"
+                className="w-1/2 md:w-1/3 h-[252px]  aspect-square "
               ></div>
             </div>
           </div>
