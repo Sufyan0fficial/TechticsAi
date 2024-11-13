@@ -70,7 +70,7 @@ function AboutUs() {
             <div className="lg:w-max w-full flex flex-col items-center lg:items-start ">
               <h3 className="text-[#54E8FF]">Discovery WorkShop</h3>
               <p className="text-center lg:text-left max-w-[30ch]  ">
-                Discussion of use case in joint sessions with the client's tech
+                Discussion of use case in joint sessions with the clients tech
                 and commercial teams.
               </p>
             </div>
