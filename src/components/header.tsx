@@ -51,7 +51,7 @@ function Header() {
           </div>
           <div className="font-Montserrat font-semibold text-base text-white uppercase  gap-6 justify-center items-center flex-grow tracking-widest lg:flex hidden">
             <Link
-              href="/"
+              href="/AboutUs"
               className="hover:text-[#45E7FF] transition-colors duration-500"
             >
               About us

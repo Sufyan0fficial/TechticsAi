@@ -13,6 +13,7 @@ import blueprint from "../../public/blueprint.svg";
 import accelerator from "../../public/accelerator.svg";
 import Cplusplus from "../../public/c++.svg";
 import ShadcnCarousel from "./Carousel";
+import Aboutussection from "./Aboutussection";
 
 function Home() {
   return (
@@ -23,18 +24,19 @@ function Home() {
         <div
           style={{
             backgroundImage: `url(${heroimage.src})`,
-            height: "calc(100vh - 96px)",
+            // height: "calc(100vh - 96px)",
+            height: "860px",
             width: "100%",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-          className="flex justify-center items-center rounded-3xl overflow-hidden "
+          className="flex justify-center items-start rounded-3xl overflow-hidden "
         >
-          <div className="flex flex-col justify-center items-center gap-8 relative ">
+          <div className="flex flex-col justify-center items-center gap-8 relative mt-36">
             <div className="font-Michroma lg:text-4xl md:text-2xl text-lg uppercase  text-center semibold tracking-tight">
               advanced ai & <br /> data technology
             </div>
-            <p className="font-Montserrat text-sm md:text-base lg:text-lg font-medium text-center lg:px-28 px-6">
+            <p className="font-Montserrat text-sm md:text-base lg:text-lg font-medium text-center max-w-[70ch] px-6">
               Welcome to Techtics.ai, your premier destination for cutting-edge
               AI solutions. With expertise in Computer Vision, Image Processing,
               Natural Language Processing, Generative AI, Data Analytics, and
@@ -43,29 +45,30 @@ function Home() {
             <button className="bg-gradient-to-br from-[#0056F8] to-[#45E7FF] text-white font-Montserrat font-semibold tracking-widest rounded-sm px-10 py-3 uppercase mb-4">
               Start Exploring
             </button>
-            {/* <div className="flex justify-center w-full  items-center ">
+            <div className="flex justify-center w-full  items-center ">
               <div
                 style={{
                   backgroundImage: `url('/robohand.svg')`,
-                  width: "327px",
-                  height: "252px",
+                  // width: "327px",
+                  // height: "252px",
                   backgroundPosition: "bottom",
                   backgroundSize: "contain",
                   mixBlendMode: "screen",
+                  backgroundRepeat: "no-repeat",
                 }}
-                className="absolute  border "
+                className="w-1/2 md:w-1/3 h-[252px]  aspect-square border"
               ></div>
-            </div> */}
+            </div>
           </div>
         </div>
 
         {/* Unlock Power of your Brand */}
-        <div className="mb-[27rem] lg:mb-72 mt-10 relative">
+        {/* <div className="mb-[27rem] lg:mb-72 mt-10 relative">
           <h2>UNLOCK POWER OF YOUR BRAND</h2>
-          <div className="md:bg-gradient-to-r from-[#0056F8] to-[#45E7FF] bg-gradient-to-b rounded-3xl  px-10 lg:py-32 pt-16 lg:pb-32 pb-40 w-full flex  lg:relative mt-10 md:w-[80%] lg:w-full ">
+          <div className="md:bg-gradient-to-r from-[#0056F8] to-[#45E7FF] bg-gradient-to-b rounded-3xl  px-10 xl:py-32 lg:py-24 pt-16  pb-40 w-full flex  lg:relative mt-10 md:w-[80%] lg:w-full ">
             <div className="lg:w-[40%]  flex flex-col gap-6 items-center md:items-start">
               <h3>about us</h3>
-              <div className="text-center md:text-start">
+              <div className="text-center md:text-start pr-6">
                 Welcome to Techtics.ai, your premier destination for
                 cutting-edge AI solutions. With expertise in Computer Vision,
                 Image Processing, Natural Language Processing, Generative AI,
@@ -77,7 +80,7 @@ function Home() {
               </button>
             </div>
             <div
-              className="lg:w-[55%] md:w-[80%] w-full absolute lg:top-0 lg:mt-16 top-full right-0  md:-mt-32 lg:mr-14 px-4 md:px-0 -mt-24  "
+              className="lg:w-[60%] xl:w-[55%] md:w-[80%] w-full absolute lg:top-0 xl:mt-16 lg:mt-20 top-full right-0  md:-mt-32 xl:mr-14 lg:mr-6 px-4 md:px-0 -mt-24  "
               // style={{
               //   boxShadow: "0px 0px 40px 6px #0056F",
               // }}
@@ -142,7 +145,7 @@ function Home() {
               We are Accredicted by
             </div>
             <div className="flex flex-wrap gap-x-10 gap-y-2">
-              <div className="relative w-[100px] h-[50px] ">
+              <div className="relative xl:w-[100px] h-[50px] lg:w-[80px] ">
                 <Image
                   src={neuro}
                   alt="neuroLogo"
@@ -151,7 +154,7 @@ function Home() {
                   className="object-contain object-center"
                 />
               </div>
-              <div className="relative w-[100px] h-[50px] ">
+              <div className="relative xl:w-[100px] h-[50px] lg:w-[80px]   border">
                 <Image
                   src={innovative}
                   alt="neuroLogo"
@@ -160,7 +163,7 @@ function Home() {
                   className="object-contain object-center"
                 />
               </div>
-              <div className="relative w-[100px] h-[50px] ">
+              <div className="relative xl:w-[100px] h-[50px] lg:w-[80px] ">
                 <Image
                   src={next}
                   alt="neuroLogo"
@@ -171,6 +174,10 @@ function Home() {
               </div>
             </div>
           </div>
+        </div> */}
+        <div className="mb-[27rem] lg:mb-72 mt-10 relative">
+          <h2 className="mb-10">Unlock the power of your brand</h2>
+          <Aboutussection />
         </div>
 
         {/* team section */}

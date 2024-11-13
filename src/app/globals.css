@@ -40,6 +40,10 @@ h3 {
   @apply font-Michroma;
 }
 
+p {
+  @apply text-xs md:text-sm lg:text-base;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
