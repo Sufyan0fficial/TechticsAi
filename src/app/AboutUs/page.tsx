@@ -7,7 +7,6 @@ import bulb from "../../../public/bulbimg.svg";
 import recycle from "../../../public/recycleimg.svg";
 import headphone from "../../../public/headphone.svg";
 import chatbot from "../../../public/chatimage.svg";
-import divider from "../../../public/divider.svg";
 import divider1 from "../../../public/divider1.svg";
 import divider2 from "../../../public/divider2.svg";
 import divider3 from "../../../public/divider3.svg";
