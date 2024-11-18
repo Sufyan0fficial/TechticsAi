@@ -26,9 +26,9 @@ function Home() {
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-          className="flex justify-center items-start rounded-3xl overflow-hidden "
+          className="flex justify-center items-start rounded-3xl overflow-hidden flex-col"
         >
-          <div className="flex flex-col justify-center items-center gap-8 relative mt-36">
+          <div className="flex flex-col justify-end items-center gap-8 relative  h-1/2 w-full">
             <div className="font-Michroma lg:text-4xl md:text-2xl text-lg uppercase  text-center semibold tracking-tight">
               advanced ai & <br /> data technology
             </div>
@@ -41,136 +41,25 @@ function Home() {
             <button className="bg-gradient-to-br from-[#0056F8] to-[#45E7FF] text-white font-Montserrat font-semibold tracking-widest rounded-sm px-10 py-3 uppercase mb-4">
               Start Exploring
             </button>
-            <div className="flex justify-center w-full  items-center ">
-              <div
-                style={{
-                  backgroundImage: `url('/robohand.svg')`,
-                  // width: "327px",
-                  // height: "252px",
-                  backgroundPosition: "bottom",
-                  backgroundSize: "contain",
-                  mixBlendMode: "screen",
-                  backgroundRepeat: "no-repeat",
-                }}
-                className="w-1/2 md:w-1/3 h-[252px]  aspect-square "
-              ></div>
-            </div>
+          </div>
+
+          <div className="flex justify-center w-full  items-center h-1/2">
+            <div
+              style={{
+                backgroundImage: `url('/robohand.svg')`,
+                // width: "327px",
+                // height: "252px",
+                // backgroundPosition: "bottom",
+                backgroundSize: "contain",
+                mixBlendMode: "screen",
+                backgroundRepeat: "no-repeat",
+              }}
+              className="w-1/2 min-[700px]:w-1/3  lg:w-1/4 aspect-square "
+            ></div>
           </div>
         </div>
-
-        {/* Unlock Power of your Brand */}
-        {/* <div className="mb-[27rem] lg:mb-72 mt-10 relative">
-          <h2>UNLOCK POWER OF YOUR BRAND</h2>
-          <div className="md:bg-gradient-to-r from-[#0056F8] to-[#45E7FF] bg-gradient-to-b rounded-3xl  px-10 xl:py-32 lg:py-24 pt-16  pb-40 w-full flex  lg:relative mt-10 md:w-[80%] lg:w-full ">
-            <div className="lg:w-[40%]  flex flex-col gap-6 items-center md:items-start">
-              <h3>about us</h3>
-              <div className="text-center md:text-start pr-6">
-                Welcome to Techtics.ai, your premier destination for
-                cutting-edge AI solutions. With expertise in Computer Vision,
-                Image Processing, Natural Language Processing, Generative AI,
-                Data Analytics, and Pattern Recognition, we specialize in
-                delivering tailored solutions to drive your business forward.{" "}
-              </div>
-              <button className="uppercase font-Montserrat tracking-widest text-sm text-black px-10 py-3 rounded-md bg-gradient-to-r from-[#45E7FF] to-[#0056F8] font-semibold w-max">
-                Know more
-              </button>
-            </div>
-            <div
-              className="lg:w-[60%] xl:w-[55%] md:w-[80%] w-full absolute lg:top-0 xl:mt-16 lg:mt-20 top-full right-0  md:-mt-32 xl:mr-14 lg:mr-6 px-4 md:px-0 -mt-24  "
-              // style={{
-              //   boxShadow: "0px 0px 40px 6px #0056F",
-              // }}
-            >
-              <div className=" relative lg:h-[600px] h-[430px]">
-                <Image
-                  src={mainImage}
-                  alt="image"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-right object-cover rounded-2xl"
-                />
-              </div>
-              <div className="w-full md:pr-2 mt-6 lg:hidden flex flex-col md:items-end items-center justify-center ">
-                <div
-                  className="uppercase text-[#FEFC51] tracking-widest mb-4 text-sm font-semibold"
-                  style={{
-                    wordSpacing: "3px",
-                  }}
-                >
-                  We are Accredicted by
-                </div>
-                <div className="flex flex-wrap gap-x-10 gap-y-2">
-                  <div className="relative md:w-[100px] h-[50px] w-[70px]">
-                    <Image
-                      src={neuro}
-                      alt="neuroLogo"
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-contain object-center"
-                    />
-                  </div>
-                  <div className="relative md:w-[100px] h-[50px] w-[70px] ">
-                    <Image
-                      src={innovative}
-                      alt="neuroLogo"
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-contain object-center"
-                    />
-                  </div>
-                  <div className="relative md:w-[100px] h-[50px] w-[70px] ">
-                    <Image
-                      src={next}
-                      alt="neuroLogo"
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-contain object-center"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-[40%] pl-12 mt-8 lg:block hidden">
-            <div
-              className="uppercase text-[#FEFC51] tracking-widest mb-4 text-sm font-semibold"
-              style={{
-                wordSpacing: "3px",
-              }}
-            >
-              We are Accredicted by
-            </div>
-            <div className="flex flex-wrap gap-x-10 gap-y-2">
-              <div className="relative xl:w-[100px] h-[50px] lg:w-[80px] ">
-                <Image
-                  src={neuro}
-                  alt="neuroLogo"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-contain object-center"
-                />
-              </div>
-              <div className="relative xl:w-[100px] h-[50px] lg:w-[80px]   border">
-                <Image
-                  src={innovative}
-                  alt="neuroLogo"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-contain object-center"
-                />
-              </div>
-              <div className="relative xl:w-[100px] h-[50px] lg:w-[80px] ">
-                <Image
-                  src={next}
-                  alt="neuroLogo"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-contain object-center"
-                />
-              </div>
-            </div>
-          </div>
-        </div> */}
+        {/* Unlock power of your brand */}
+        
         <div className="mb-[27rem] lg:mb-72 mt-10 relative">
           <h2 className="mb-10">Unlock the power of your brand</h2>
           <Aboutussection />

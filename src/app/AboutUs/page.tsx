@@ -11,6 +11,7 @@ import divider1 from "../../../public/divider1.svg";
 import divider2 from "../../../public/divider2.svg";
 import divider3 from "../../../public/divider3.svg";
 import Image from "next/image";
+import LeaveaReply from "@/components/LeaveaReply";
 
 function AboutUs() {
   return (
@@ -116,7 +117,7 @@ function AboutUs() {
                     />
                   </div>
                 </div>
-                <div className=" flex justify-center items-center border-l-4 border-l-pink-600 ">
+                <div className=" flex justify-center items-center border-l-2 md:border-l-2 lg:border-l-4 border-l-pink-600 ">
                   <h2>
                     Our <br className="md:hidden" /> process
                   </h2>
@@ -157,7 +158,7 @@ function AboutUs() {
             <div className="lg:w-max w-full flex flex-col items-center lg:items-start">
               <h3 className="text-[#54E8FF]">
                 Development
-                <br className="hidden lg:block" /> & Deployment
+                <br className="md:hidden lg:block" /> & Deployment
               </h3>
               <p className="max-w-[30ch] text-center lg:text-left">
                 Implementation, delivery compliance, user experience and
@@ -243,6 +244,11 @@ function AboutUs() {
               </p>
             </div>
           </div>
+        </div>
+
+        {/* Leave a reply  */}
+        <div className="pb-20">
+          <LeaveaReply />
         </div>
       </Container>
     </div>

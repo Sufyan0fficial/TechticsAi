@@ -57,7 +57,7 @@ function Header() {
               About us
             </Link>
             <Link
-              href="/"
+              href="/Services"
               className="hover:text-[#45E7FF] transition-colors duration-500"
             >
               Services
