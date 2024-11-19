@@ -63,7 +63,7 @@ function Header() {
               Services
             </Link>
             <Link
-              href="/"
+              href="/Portfolio"
               className="hover:text-[#45E7FF] transition-colors duration-500"
             >
               Portfolio

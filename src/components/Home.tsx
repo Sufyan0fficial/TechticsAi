@@ -59,7 +59,7 @@ function Home() {
           </div>
         </div>
         {/* Unlock power of your brand */}
-        
+
         <div className="mb-[27rem] lg:mb-72 mt-10 relative">
           <h2 className="mb-10">Unlock the power of your brand</h2>
           <Aboutussection />

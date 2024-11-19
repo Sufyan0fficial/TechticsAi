@@ -9,7 +9,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image, { StaticImageData } from "next/image";
-import manger from "../../public/manager.jpg";
+import manger from "../../public/manger.jpg";
 
 interface CommentType {
   comment: string;

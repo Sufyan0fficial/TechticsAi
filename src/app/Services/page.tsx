@@ -226,7 +226,7 @@ function Services() {
 
           {/* Our Portfolio */}
 
-          <div className="mt-36">
+          <div className="mt-44">
             <div
               className="rounded-3xl pt-20 pb-60"
               style={{
@@ -324,7 +324,7 @@ function Services() {
           </div>
 
           {/* Leave a reply */}
-          <div className="mt-36 mb-72">
+          <div className="mt-44 md: mb-72">
             <LeaveaReply />
           </div>
         </Container>
