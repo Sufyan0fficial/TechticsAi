@@ -75,9 +75,11 @@ function Header() {
               Blogs
             </Link>
           </div>
-          <button className="font-Montserrat font-semibold text-base text-black bg-gradient-to-r from-[#FEFC45] to-[#41FE51] text-center w-[215px] h-[50px] rounded-md uppercase tracking-widest hidden lg:block hover:from-white hover:to-white ">
-            Consult us
-          </button>
+          <Link href="/Contactus">
+            <button className="font-Montserrat font-semibold text-base text-black bg-gradient-to-r from-[#FEFC45] to-[#41FE51] text-center w-[215px] h-[50px] rounded-md uppercase tracking-widest hidden lg:block hover:from-white hover:to-white ">
+              Consult us
+            </button>
+          </Link>
           <div className="block lg:hidden relative md:w-14 md:h-14 w-10 h-10">
             {clicked ? (
               <Image

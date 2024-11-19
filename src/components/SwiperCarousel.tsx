@@ -1,19 +1,5 @@
 "use client";
 
-// import React from "react";
-// // Import Swiper React components
-// import { Swiper, SwiperSlide } from "swiper/react";
-
-// // Import Swiper styles
-// import "swiper/css";
-// import "swiper/css/effect-coverflow";
-// import "swiper/css/pagination";
-// import "swiper/css/autoplay";
-
-// // Import required modules
-// import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
-
-// import Image from "next/image";
 import brain from "../../public/brain.svg";
 import recycle from "../../public/recycleimg.svg";
 import bulb from "../../public/bulbimg.svg";
@@ -25,79 +11,6 @@ const roboto = Roboto({
   subsets: ["latin"],
   variable: "--font-roboto",
 });
-
-// const Data = [
-//   { img: brain },
-//   { img: recycle },
-//   { img: bulb },
-//   { img: award },
-//   { img: blueprint },
-// ];
-
-// export default function SwiperCarousel() {
-//   return (
-//     <>
-//       <Swiper
-//         effect={"coverflow"}
-//         grabCursor={true}
-//         spaceBetween={30}
-//         slidesPerView={3}
-//         centeredSlides={true}
-//         centeredSlidesBounds={true}
-//         coverflowEffect={{
-//           rotate: 0,
-//           stretch: 0,
-//           depth: 100,
-//           modifier: 1,
-//           slideShadows: false,
-//         }}
-//         pagination={{
-//           dynamicBullets: true,
-//           clickable: true,
-//         }}
-//         modules={[EffectCoverflow, Pagination, Autoplay]}
-//         autoplay={{ delay: 3000 }}
-//         className="swiper w-full border"
-//         breakpoints={{
-//           0: {
-//             slidesPerView: 1, // 1 slide on small screens
-//             spaceBetween: 10,
-//           },
-//           640: {
-//             slidesPerView: 2, // 2 slides on medium screens
-//             spaceBetween: 20,
-//           },
-//           1024: {
-//             slidesPerView: 3, // 2 slides on medium screens
-//             spaceBetween: 30,
-//           },
-//         }}
-//       >
-//         <div>
-//           {Data.map((profile, index) => (
-//             <SwiperSlide
-//               key={index}
-//               className="w-max rounded-lg border-2 border-black flex justify-center items-center my-24  p-10  "
-//               style={{
-//                 background:
-//                   "linear-gradient(336.7deg, #FFFFFF -4.68%, #56FFFF 93.89%)",
-//               }}
-//             >
-//               <div className="w-[260px] h-[225px] relative">
-//                 <Image
-//                   src={profile.img}
-//                   fill
-//                   alt="image"
-//                   className="object-contain object-center"
-//                 />
-//               </div>
-//             </SwiperSlide>
-//           ))}
-//         </div>
-//       </Swiper>
-//     </>
-//   );
-// }
 
 import React from "react";
 // Import Swiper React components

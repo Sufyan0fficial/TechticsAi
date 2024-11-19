@@ -142,6 +142,7 @@ function Portfolio() {
               heading="Natural Language Processing"
               body="Explore new horizons with our advanced NLP and Generative AI projects, revolutionizing language understanding and content generation for boundless possibilities."
               iconimg={brain}
+              href="/Portfolio/natural-language-processing"
             />
           </div>
 

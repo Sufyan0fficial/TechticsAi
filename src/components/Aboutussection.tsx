@@ -4,6 +4,7 @@ import innovative from "../../public/innovativelogo.svg";
 import neuro from "../../public/neurologo.svg";
 import next from "../../public/nextlogo.svg";
 import React from "react";
+import Link from "next/link";
 interface AboutsSectionType {
   heading: string;
   body: string;
@@ -13,6 +14,7 @@ interface AboutsSectionType {
   icon3: StaticImageData;
   bodycolor?: string;
   iconimg?: StaticImageData;
+  href: string | URL;
 }
 
 Aboutussection.defaultProps = {
@@ -22,6 +24,7 @@ Aboutussection.defaultProps = {
   icon1: neuro,
   icon2: innovative,
   icon3: next,
+  href: "/",
 };
 
 function Aboutussection({
@@ -33,6 +36,7 @@ function Aboutussection({
   icon3,
   bodycolor,
   iconimg,
+  href,
 }: AboutsSectionType) {
   return (
     <div>
@@ -62,9 +66,11 @@ function Aboutussection({
             >
               {body}
             </div>
-            <button className="uppercase font-Montserrat tracking-widest text-sm text-black px-10 py-3 rounded-md bg-gradient-to-r from-[#45E7FF] to-[#0056F8] font-semibold w-max">
-              Know more
-            </button>
+            <Link href={href}>
+              <button className="uppercase font-Montserrat tracking-widest text-sm text-black px-10 py-3 rounded-md bg-gradient-to-r from-[#45E7FF] to-[#0056F8] font-semibold w-max">
+                Know more
+              </button>
+            </Link>
           </div>
         </div>
         <div
