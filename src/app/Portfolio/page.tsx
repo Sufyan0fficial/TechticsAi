@@ -60,7 +60,7 @@ function Portfolio() {
         {/* team reserch credentials */}
         <div>
           <h2 className="mb-10 lg:mb-20 mt-36">
-            AI Team's Research Credentials
+            AI Teams Research Credentials
           </h2>
           <div className="flex flex-wrap justify-center gap-y-6">
             <div className="lg:w-1/4 w-1/2   flex flex-col items-center flex-shrink-0">
