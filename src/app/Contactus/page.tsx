@@ -127,8 +127,8 @@ function ContactUs() {
             >
               <div className="mb-14">
                 <h3 className="text-black ">
-                  Got Ideas/ We've Got the skills <br />
-                  le'ts work together.
+                  Got Ideas/ We`&apos;`ve Got the skills <br />
+                  le`&apos;`ts work together.
                 </h3>
                 <p className="text-black mt-4">Tell us More about Yourself!</p>
               </div>
