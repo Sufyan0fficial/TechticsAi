@@ -49,7 +49,7 @@ function DetailedPortfolio() {
           </div>
 
           {/* Taxation and Law */}
-          <div className="mt-36 flex justify-center gap-16">
+          <div className="mt-36 flex flex-wrap-reverse justify-center gap-16">
             {/* 1st container */}
             <div className="lg:w-[45%] w-full ">
               <div>
@@ -156,7 +156,7 @@ function DetailedPortfolio() {
               </div>
             </div>
             {/* image container */}
-            <div className="w-[45%] h-[560px] relative aspect-square">
+            <div className="lg:w-[45%] w-full lg:h-[450px] relative md:aspect-video aspect-square ">
               <Image
                 src={mainimg}
                 alt="image"

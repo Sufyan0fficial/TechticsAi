@@ -106,17 +106,38 @@ function Header() {
         </div>
         {clicked && (
           <div className="flex flex-col gap-6 font-Montserrat text-white text-xl tracking-widest font-extrabold items-center justify-center mt-20 md:mt-28 md:text-2xl lg:hidden">
-            <Link href="/" className="uppercase hover:text-[#45E7FF]">
+            <Link
+              href="/AboutUs"
+              className="uppercase hover:text-[#45E7FF]"
+              onClick={() => setclicked((pre) => !pre)}
+            >
               About us
             </Link>
-            <Link href="/" className="uppercase hover:text-[#45E7FF]">
+            <Link
+              href="/Services"
+              className="uppercase hover:text-[#45E7FF]"
+              onClick={() => setclicked((pre) => !pre)}
+            >
               Services
             </Link>
-            <Link href="/" className="uppercase hover:text-[#45E7FF]">
+            <Link
+              href="/Portfolio"
+              className="uppercase hover:text-[#45E7FF]"
+              onClick={() => setclicked((pre) => !pre)}
+            >
               Portfolio
             </Link>
-            <Link href="/" className="uppercase hover:text-[#45E7FF]">
+            <Link
+              href="/"
+              className="uppercase hover:text-[#45E7FF]"
+              onClick={() => setclicked((pre) => !pre)}
+            >
               Blogs
+            </Link>
+            <Link href="/Contactus" onClick={() => setclicked((pre) => !pre)}>
+              <button className="font-Montserrat font-semibold text-base text-black bg-gradient-to-r from-[#FEFC45] to-[#41FE51] text-center w-[215px] h-[50px] rounded-md uppercase tracking-widest block lg:hidden hover:from-white hover:to-white ">
+                Consult us
+              </button>
             </Link>
           </div>
         )}

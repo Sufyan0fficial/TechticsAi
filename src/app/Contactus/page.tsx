@@ -55,63 +55,67 @@ function ContactUs() {
           </div>
 
           {/* Lets get in touch */}
-          <div className="flex mt-20 ">
+          <div className="flex my-36 flex-col lg:flex-row gap-10 lg:justify-between ">
             {/* Detail Section */}
-            <div className="lg:w-[60%] w-full  pl-32 ">
-              <div className="mb-20">
-                <h2 className="text-white text-left">Lets Get in touch</h2>
-                <p className="text-[#B4B4B4] mt-4 w-[60ch]">
-                  Avoids pleasure itself, because it is pleasure, but because
-                  those who do not know how to pursue pleasure rationally
-                  encounter
-                </p>
-              </div>
-              <div className="flex flex-col gap-10">
-                <div className="flex gap-6 items-start">
-                  <div className="relative w-[29px] h-[44px]">
-                    <Image
-                      src={finger}
-                      alt="chatus img"
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-contain object-center"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="lg:text-xl md:text-lg ">Chat to us</h3>
-                    <p className="text-[#B4B4B4] mt-2">contactus@techtics.ai</p>
-                  </div>
+            <div className="xl:w-[50%] lg:w-[45%] w-full   flex flex-col items-center lg:items-start flex-shrink px-4 lg:px-0 xl:pl-24">
+              <div>
+                <div className="mb-20">
+                  <h2 className="text-white text-left">Lets Get in touch</h2>
+                  <p className="text-[#B4B4B4] mt-4 max-w-[60ch]">
+                    Avoids pleasure itself, because it is pleasure, but because
+                    those who do not know how to pursue pleasure rationally
+                    encounter
+                  </p>
                 </div>
-                <div className="flex gap-6 items-start">
-                  <div className="relative w-[29px] h-[44px]">
-                    <Image
-                      src={location}
-                      alt="chatus img"
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-contain object-center"
-                    />
+                <div className="flex flex-col gap-10">
+                  <div className="flex gap-6 items-start">
+                    <div className="relative w-[29px] h-[44px]">
+                      <Image
+                        src={finger}
+                        alt="chatus img"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-contain object-center"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="lg:text-xl md:text-lg ">Chat to us</h3>
+                      <p className="text-[#B4B4B4] mt-2">
+                        contactus@techtics.ai
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="lg:text-xl md:text-lg ">
-                      Visit our Office Branch
-                    </h3>
-                    <p className="text-[#B4B4B4] mt-2">NFC Society, Lahore</p>
+                  <div className="flex gap-6 items-start">
+                    <div className="relative w-[29px] h-[44px]">
+                      <Image
+                        src={location}
+                        alt="chatus img"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-contain object-center"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="lg:text-xl md:text-lg ">
+                        Visit our Office Branch
+                      </h3>
+                      <p className="text-[#B4B4B4] mt-2">NFC Society, Lahore</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex gap-6 items-start">
-                  <div className="relative w-[29px] h-[44px]">
-                    <Image
-                      src={phone}
-                      alt="chatus img"
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-contain object-center"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="lg:text-xl md:text-lg ">CALL US</h3>
-                    <p className="text-[#B4B4B4] mt-2">+92 334 4598931</p>
+                  <div className="flex gap-6 items-start">
+                    <div className="relative w-[29px] h-[44px]">
+                      <Image
+                        src={phone}
+                        alt="chatus img"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-contain object-center"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="lg:text-xl md:text-lg ">CALL US</h3>
+                      <p className="text-[#B4B4B4] mt-2">+92 334 4598931</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -119,7 +123,7 @@ function ContactUs() {
 
             {/* Form Section */}
             <div
-              className="lg:w-[40%] w-full p-12 "
+              className="xl:w-[50%] lg:w-[50%] w-full p-12 mt-16 lg:mt-0"
               style={{
                 background:
                   "linear-gradient(130.86deg, #FFFFFF 26.72%, #FEFC30 79.18%, #41FE51 96.97%)",
@@ -127,10 +131,10 @@ function ContactUs() {
             >
               <div className="mb-14">
                 <h3 className="text-black ">
-                  Got Ideas/ We`&apos;`ve Got the skills <br />
-                  le`&apos;`ts work together.
+                  Got Ideas/ We&apos;ve Got the skills <br />
+                  le&apos;ts work together.
                 </h3>
-                <p className="text-black mt-4">Tell us More about Yourself!</p>
+                <p className="text-black mt-4 ">Tell us More about Yourself!</p>
               </div>
               <form action="" className="flex flex-col gap-3">
                 <input
