@@ -109,32 +109,6 @@ p {
   }
 }
 
-/* body {
-  color: white;
-} */
-
-@media (min-width: 1024px) {
-  .swiper-slide-active {
-    width: 25% !important;
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
-
-    /* flex-shrink: 1; */
-    /* height: 586px !important; */
-    aspect-ratio: 1/1.6 !important;
-    translate: -2px !important;
-    height: max-content !important;
-    transform: translateY(0px) !important;
-  }
-}
-
-/* display: flex !important;
-  align-items: center;
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-  margin-right: 80px !important;
-} */
-
 .swiper {
   width: 100%;
   padding-top: 50px;

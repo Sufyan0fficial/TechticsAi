@@ -1,10 +1,10 @@
 "use client";
 
-import brain from "../../public/brain.svg";
-import recycle from "../../public/recycleimg.svg";
-import bulb from "../../public/bulbimg.svg";
-import award from "../../public/award.svg";
-import blueprint from "../../public/blueprint.svg";
+import NLP from "../../public/NLP.svg";
+import MachineL from "../../public/MachineLearning.svg";
+import Appdev from "../../public/MobileAppdev.svg";
+import UIUX from "../../public/UIUX.svg";
+
 import { Roboto } from "next/font/google";
 const roboto = Roboto({
   weight: "400",
@@ -30,49 +30,34 @@ import Link from "next/link";
 
 const Data = [
   {
-    img: brain,
+    img: NLP,
     services: "NLP",
     desc: "NLP drives language understanding, AIs cornerstone.",
   },
   {
-    img: recycle,
+    img: MachineL,
     services: "Machine Learning",
     desc: "Machine Learning powers AI innovations, constantly evolving.",
   },
   {
-    img: bulb,
+    img: Appdev,
     services: "Mobile App Development",
     desc: "Mobile App Development Mobile App blends AI seamlessly, enhancing usability.",
   },
   {
-    img: award,
+    img: UIUX,
     services: "UI/UX",
     desc: "UI/UX expertly crafts user-friendly and visually appealing interfaces.",
   },
   {
-    img: blueprint,
+    img: NLP,
     services: "Digital Marketing",
     desc: "Digital marketing boosts online presence effectively.",
   },
   {
-    img: blueprint,
+    img: Appdev,
     services: "Custom Software Development",
     desc: "Custom software development tailors solutions precisely.",
-  },
-  {
-    img: blueprint,
-    services: "DevOps & Cloud Solutions",
-    desc: "DevOps & Cloud Solutions optimize operations, scalability.",
-  },
-  {
-    img: blueprint,
-    services: "ChatBot Developments",
-    desc: "As AI Conversational Advances, Chatbots Continue to Evolve.",
-  },
-  {
-    img: blueprint,
-    services: "Blockchain Services",
-    desc: "Blockchain secures transactions, disrupts industries positively.",
   },
 ];
 
@@ -100,6 +85,7 @@ export default function SwiperCarousel() {
           }}
           modules={[EffectCoverflow, Pagination, Autoplay]}
           autoplay={{ delay: 3000 }}
+          speed={800}
           className="mySwiper lg:!pb-20 !pb-14  "
           breakpointsBase="window"
           breakpoints={{
@@ -107,14 +93,19 @@ export default function SwiperCarousel() {
               slidesPerView: 1, // 1 slide on small screens
               spaceBetween: 10,
             },
-            640: {
-              slidesPerView: 2, // 2 slides on medium screens
-              spaceBetween: 30,
+            678: {
+              slidesPerView: 1.5, // 2 slides on medium screens
+              spaceBetween: 20,
               initialSlide: 1,
             },
             1024: {
-              slidesPerView: 4, // 2 slides on medium screens
-              // spaceBetween: 40,
+              slidesPerView: 2, // 2 slides on medium screens
+              spaceBetween: 30,
+              initialSlide: 2,
+            },
+            1280: {
+              slidesPerView: 3,
+              spaceBetween: 40,
               initialSlide: 2,
             },
           }}
@@ -125,32 +116,21 @@ export default function SwiperCarousel() {
                 className=" !flex flex-col justify-center items-center h-full  mt-20 "
                 key={index}
               >
-                <div
-                  className="aspect-square w-full min-h-full !flex  flex-col justify-center  items-center rounded-lg p-10 relative "
-                  style={{
-                    background:
-                      "linear-gradient(336.7deg, #FFFFFF -4.68%, #56FFFF 93.89%)",
-                  }}
-                >
-                  <div className="w-2/3 aspect-square relative ">
+                <Link href="/Services" className=" flex flex-col items-center">
+                  <div className="relative  w-[402px] aspect-square  rounded-lg border border-[#FFFFFF66]">
                     <Image
                       src={profile.img}
+                      alt={profile.services}
                       fill
-                      alt="image"
-                      className="object-contain object-center "
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover object-center rounded-lg"
                     />
                   </div>
-                  <Link
-                    href="/Services"
-                    className={`uppercase text-black tracking-widest underline absolute bottom-8 w-full text-center ${roboto.variable} hover:text-pink-500`}
-                  >
-                    View Details
-                  </Link>
-                </div>
-                <div className="uppercase text-xl text-center mt-3 mb-1 font-Michroma">
-                  {profile.services}
-                </div>
-                <div className="text-center">{profile.desc}</div>
+                  <div className="uppercase text-xl text-center mt-5  mb-1 font-Michroma">
+                    {profile.services}
+                  </div>
+                  <div className="text-center">{profile.desc}</div>
+                </Link>
               </SwiperSlide>
             ))}
           </div>
