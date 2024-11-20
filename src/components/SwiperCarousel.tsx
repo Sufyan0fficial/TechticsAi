@@ -104,9 +104,12 @@ export default function SwiperCarousel() {
               initialSlide: 2,
             },
             1280: {
-              slidesPerView: 3,
+              slidesPerView: 2.5,
               spaceBetween: 40,
               initialSlide: 2,
+            },
+            1536: {
+              slidesPerView: 3,
             },
           }}
         >
