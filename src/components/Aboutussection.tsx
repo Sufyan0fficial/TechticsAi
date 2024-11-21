@@ -60,7 +60,7 @@ function Aboutussection({
                 </div>
               </div>
             )}
-            <h3>{heading}</h3>
+            <h3 className="text-center md:text-left">{heading}</h3>
             <div
               className={`text-center md:text-start pr-6 font-medium ${bodycolor}`}
             >
@@ -85,7 +85,7 @@ function Aboutussection({
               alt="image"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="object-right object-cover rounded-2xl"
+              className="object-center object-cover rounded-2xl"
             />
           </div>
           <div className="w-full md:pr-2 mt-6 lg:hidden flex flex-col md:items-end items-center justify-center ">

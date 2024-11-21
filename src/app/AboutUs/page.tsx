@@ -12,6 +12,7 @@ import divider2 from "../../../public/divider2.svg";
 import divider3 from "../../../public/divider3.svg";
 import Image from "next/image";
 import LeaveaReply from "@/components/LeaveaReply";
+import SwiperCarousel from "@/components/TeamSwiperCarousel";
 
 function AboutUs() {
   return (
@@ -244,6 +245,13 @@ function AboutUs() {
               </p>
             </div>
           </div>
+        </div>
+
+        {/* Meet our best team */}
+
+        <div>
+          <h2>Meet our Best Team</h2>
+          <SwiperCarousel />
         </div>
 
         {/* Leave a reply  */}

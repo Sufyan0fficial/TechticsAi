@@ -4,6 +4,7 @@ import NLP from "../../public/NLP.svg";
 import MachineL from "../../public/MachineLearning.svg";
 import Appdev from "../../public/MobileAppdev.svg";
 import UIUX from "../../public/UIUX.svg";
+import "@/components/style.css";
 
 import { Roboto } from "next/font/google";
 const roboto = Roboto({
@@ -109,7 +110,7 @@ export default function SwiperCarousel() {
               initialSlide: 2,
             },
             1536: {
-              slidesPerView: 3,
+              slidesPerView: 3.2,
             },
           }}
         >

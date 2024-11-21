@@ -117,11 +117,13 @@ p {
 
 .swiper-pagination-bullet {
   background-color: #56ffff !important;
-  opacity: 0.7 !important;
+  /* opacity: 0.7 !important; */
+  opacity: 1 !important;
+  margin: 0 8px !important;
 }
 
-.swiper-pagination-bullet-active {
+/* .swiper-pagination-bullet-active {
   background-color: rgb(244, 85, 225) !important;
   opacity: 1;
-  transform: scaley(3) !important;
-}
+  
+} */

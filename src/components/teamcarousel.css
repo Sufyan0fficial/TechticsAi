@@ -1,0 +1,5 @@
+.swiper-pagination-bullet-active {
+  background-color: rgb(244, 85, 225) !important;
+  opacity: 1;
+  transform: scale(1.5) !important;
+}

@@ -5,11 +5,12 @@ import Image from "next/image";
 import SwiperCarousel from "@/components/SwiperCarousel";
 import projectlogo from "../../../public/projectbaselogo.svg";
 import frame from "../../../public/framereverse.svg";
-import aiimg from "../../../public/aiimg.jpg";
 import brain from "../../../public/brain.svg";
 import vision from "../../../public/eye.svg";
 import memory from "../../../public/blueprint.svg";
 import LeaveaReply from "@/components/LeaveaReply";
+import servicesengagingimg from "../../../public/servicesengagingimg.jpg";
+import product from "../../../public/product.svg";
 
 function Services() {
   return (
@@ -154,13 +155,13 @@ function Services() {
           <div className="mt-40">
             <h2>Engage with us</h2>
             <div className="flex flex-col lg:flex-row lg:gap-16 gap-8 mt-10 md:mt-20">
-              <div className="lg:w-1/2  w-full aspect-square md:aspect-[1/0.7] lg:aspect-square relative">
+              <div className="lg:w-1/2  w-full aspect-square md:aspect-[1/0.7]   relative">
                 <Image
-                  src={aiimg}
-                  alt="img"
+                  src={servicesengagingimg}
+                  alt="Robohand image"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover object-center rounded-2xl"
+                  className="object-cover object-center rounded-2xl border border-[#F4F4F4]"
                 />
               </div>
               <div className="lg:w-1/2 w-full flex flex-col lg:justify-center lg:gap-16 gap-4">
@@ -202,9 +203,9 @@ function Services() {
                       backgroundRepeat: "no-repeat",
                     }}
                   >
-                    <div className="w-[70%] aspect-square relative">
+                    <div className="w-[60%] aspect-square relative">
                       <Image
-                        src={projectlogo}
+                        src={product}
                         alt="projectlogo"
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

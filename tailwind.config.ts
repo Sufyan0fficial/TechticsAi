@@ -18,6 +18,7 @@ const config: Config = {
       fontFamily: {
         Montserrat: ["var(--font-montserrat)"],
         Michroma: ["var(--font-michroma)"],
+        poppins: ["var(--font-poppins)"],
       },
       borderRadius: {
         lg: "var(--radius)",

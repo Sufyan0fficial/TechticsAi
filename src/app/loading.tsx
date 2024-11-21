@@ -1,4 +1,4 @@
-import "@/components/loading.css";
+import "@/components/style.css";
 
 export default function Loading() {
   // Or a custom loading skeleton component
