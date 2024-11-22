@@ -1,7 +1,6 @@
 import React from "react";
 import heroimage from "../../../public/aboutusmain.svg";
 import { Container } from "@mui/material";
-import Aboutussection from "@/components/Aboutussection";
 import circleframe from "../../../public/circleframe.svg";
 import bulb from "../../../public/bulbimg.svg";
 import recycle from "../../../public/recycleimg.svg";
@@ -13,6 +12,7 @@ import divider3 from "../../../public/divider3.svg";
 import Image from "next/image";
 import LeaveaReply from "@/components/LeaveaReply";
 import SwiperCarousel from "@/components/TeamSwiperCarousel";
+import AboutusComp from "@/components/AboutusComp";
 
 function AboutUs() {
   return (
@@ -61,8 +61,8 @@ function AboutUs() {
       </div>
       <Container maxWidth="xl">
         {/* About us section */}
-        <div className="relative mb-[27rem] lg:mb-72 ">
-          <Aboutussection bodycolor="text-black" />
+        <div className="mb-52">
+          <AboutusComp />
         </div>
 
         {/* Our Process section */}

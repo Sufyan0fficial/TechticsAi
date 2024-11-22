@@ -5,10 +5,12 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import logo from "../../public/Techticslogo.svg";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 function Header() {
   const [isscroll, setisscroll] = useState(false);
   const [clicked, setclicked] = useState(false);
+  const pathname = usePathname();
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 60) {
@@ -52,25 +54,33 @@ function Header() {
           <div className="font-Montserrat font-semibold text-base text-white uppercase  gap-6 justify-center items-center flex-grow tracking-widest lg:flex hidden">
             <Link
               href="/AboutUs"
-              className="hover:text-[#45E7FF] transition-colors duration-500"
+              className={`hover:text-[#45E7FF] transition-colors duration-500 ${
+                pathname === "/AboutUs" ? "text-[#45E7FF]" : ""
+              }`}
             >
               About us
             </Link>
             <Link
               href="/Services"
-              className="hover:text-[#45E7FF] transition-colors duration-500"
+              className={`hover:text-[#45E7FF] transition-colors duration-500 ${
+                pathname === "/Services" ? "text-[#45E7FF] " : ""
+              }`}
             >
               Services
             </Link>
             <Link
               href="/Portfolio"
-              className="hover:text-[#45E7FF] transition-colors duration-500"
+              className={`hover:text-[#45E7FF] transition-colors duration-500 ${
+                pathname === "/Portfolio" ? "text-[#45E7FF]" : ""
+              }`}
             >
               Portfolio
             </Link>
             <Link
               href="/"
-              className="hover:text-[#45E7FF] transition-colors duration-500"
+              className={`hover:text-[#45E7FF] transition-colors duration-500 ${
+                pathname === "/Blogs" ? "text-[#45E7FF]" : ""
+              }`}
             >
               Blogs
             </Link>

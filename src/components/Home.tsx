@@ -9,7 +9,7 @@ import blueprint from "../../public/blueprint.svg";
 import accelerator from "../../public/accelerator.svg";
 import Cplusplus from "../../public/c++.svg";
 import ShadcnCarousel from "./Carousel";
-import Aboutussection from "./Aboutussection";
+import AboutusComp from "./AboutusComp";
 
 function Home() {
   return (
@@ -62,7 +62,7 @@ function Home() {
 
         <div className="mb-[27rem] lg:mb-72 mt-10 relative">
           <h2 className="mb-10">Unlock the power of your brand</h2>
-          <Aboutussection />
+          <AboutusComp />
         </div>
 
         {/* team section */}

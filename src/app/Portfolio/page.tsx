@@ -1,15 +1,14 @@
 import { Container } from "@mui/material";
 import React from "react";
-import Image from "next/image";
 import heroimage from "../../../public/heroimage.svg";
 
-import Aboutussection from "@/components/Aboutussection";
+import PortfoliomainSection from "@/components/PortfoliomainSections";
 import brain from "../../../public/brain.svg";
 import vision from "../../../public/eye.svg";
 import Analytics from "../../../public/Dataanalytics.svg";
 import otherproduct from "../../../public/otherproduct.svg";
 import LeaveaReply from "@/components/LeaveaReply";
-import img1 from "../../../public/portfolioimg1.jpg";
+import img1 from "../../../public/portfolioimg1.svg";
 import img2 from "../../../public/portfolioimg2.jpg";
 import img3 from "../../../public/portfolioimg3.jpg";
 import img4 from "../../../public/portfolioimg4.jpg";
@@ -130,7 +129,7 @@ function Portfolio() {
               </div> */}
               <div className="flex flex-col items-center  w-full lg:mt-10 mt-2 py-6 ">
                 <h2 className="text-white">200+</h2>
-                <div className="uppercase text-[#B4B4B4] tracking-wider">
+                <div className="uppercase text-[#B4B4B4] tracking-wider text-center">
                   Research Articles
                 </div>
               </div>
@@ -142,7 +141,7 @@ function Portfolio() {
         <div className="flex flex-col gap-28 lg:gap-0 mb-28 lg:mb-0 mt-36">
           {/* NLP */}
           <div className="mb-[27rem] lg:mb-72 mt-10 relative">
-            <Aboutussection
+            <PortfoliomainSection
               heading="Natural Language Processing"
               body="Explore new horizons with our advanced NLP and Generative AI projects, revolutionizing language understanding and content generation for boundless possibilities."
               iconimg={brain}
@@ -152,7 +151,7 @@ function Portfolio() {
 
           {/* Computer vision */}
           <div className="mb-[27rem] lg:mb-72 mt-10 relative">
-            <Aboutussection
+            <PortfoliomainSection
               heading="Computer Vision"
               body="Discover groundbreaking advancements in our Computer Vision and Image Processing initiatives, revealing concealed insights and utilizing visual intelligence for advantageous actionable results."
               iconimg={vision}
@@ -162,7 +161,7 @@ function Portfolio() {
 
           {/* Data Analytics */}
           <div className="mb-[27rem] lg:mb-72 mt-10 relative">
-            <Aboutussection
+            <PortfoliomainSection
               heading="Data Analytics"
               body="Unleash the potential of your data with our state-of-the-art Analytics and Visualization projects, empowering informed decision-making through valuable insights"
               iconimg={Analytics}
@@ -172,7 +171,7 @@ function Portfolio() {
 
           {/* Other Products */}
           <div className="mb-[27rem] lg:mb-72 mt-10 relative">
-            <Aboutussection
+            <PortfoliomainSection
               heading="Other Products"
               body="We offer ourselves as Technology Partner for Product Development. Our existing products are Retail Viewlytics Pro, AgriWheels, LogiBot: LLM based Chatbot"
               iconimg={otherproduct}
