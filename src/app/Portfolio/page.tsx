@@ -21,17 +21,17 @@ function Portfolio() {
   const ref2 = useRef(null);
   const ref3 = useRef(null);
   const ref4 = useRef(null);
-  const isinView1 = useInView(ref1);
-  const isinView2 = useInView(ref2);
-  const isinView3 = useInView(ref3);
-  const isinView4 = useInView(ref4);
+  const isinView1 = useInView(ref1, { amount: 0.1 });
+  const isinView2 = useInView(ref2, { amount: 0.1 });
+  const isinView3 = useInView(ref3, { amount: 0.1 });
+  const isinView4 = useInView(ref4, { amount: 0.1 });
 
   return (
     <div
-      className={`${isinView1 ? "bg-blue-700" : "bg-inherit"} ${
-        isinView2 ? "bg-teal-500" : "bg-inherit"
-      } ${isinView3 ? "bg-green-900" : "bg-inherit"} ${
-        isinView4 ? "bg-inherit " : "bg-inherit"
+      className={`${isinView1 && "bg-blue-700"} ${isinView2 && "bg-teal-500"} ${
+        isinView3 && "bg-green-900"
+      } ${
+        isinView4 && "bg-inherit "
       } transition-colors duration-500 animate-in`}
     >
       <Container maxWidth="xl">
