@@ -1,5 +1,7 @@
+"use client";
+
 import { Container } from "@mui/material";
-import React from "react";
+import React, { useRef } from "react";
 import heroimage from "../../../public/heroimage.svg";
 
 import PortfoliomainSection from "@/components/PortfoliomainSections";
@@ -12,10 +14,26 @@ import img1 from "../../../public/portfolioimg1.svg";
 import img2 from "../../../public/portfolioimg2.jpg";
 import img3 from "../../../public/portfolioimg3.jpg";
 import img4 from "../../../public/portfolioimg4.jpg";
+import { useInView } from "motion/react";
 
 function Portfolio() {
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const ref4 = useRef(null);
+  const isinView1 = useInView(ref1);
+  const isinView2 = useInView(ref2);
+  const isinView3 = useInView(ref3);
+  const isinView4 = useInView(ref4);
+
   return (
-    <div>
+    <div
+      className={`${isinView1 ? "bg-[#1c60fa]" : "bg-inherit"} ${
+        isinView2 ? "bg-[#ee74ef]" : "bg-inherit"
+      } ${isinView3 ? "bg-[#38bfb6]" : "bg-inherit"} ${
+        isinView4 ? "bg-[#fbbd61]" : "bg-inherit"
+      } transition-colors duration-500`}
+    >
       <Container maxWidth="xl">
         {/* hero section */}
         <div
@@ -140,7 +158,7 @@ function Portfolio() {
         {/* Wrapper */}
         <div className="flex flex-col gap-28 lg:gap-0 mb-28 lg:mb-0 mt-36">
           {/* NLP */}
-          <div className="mb-[27rem] lg:mb-72 mt-10 relative">
+          <div className="mb-[27rem] lg:mb-72 mt-10 relative " ref={ref1}>
             <PortfoliomainSection
               heading="Natural Language Processing"
               body="Explore new horizons with our advanced NLP and Generative AI projects, revolutionizing language understanding and content generation for boundless possibilities."
@@ -150,7 +168,7 @@ function Portfolio() {
           </div>
 
           {/* Computer vision */}
-          <div className="mb-[27rem] lg:mb-72 mt-10 relative">
+          <div className="mb-[27rem] lg:mb-72 mt-10 relative" ref={ref2}>
             <PortfoliomainSection
               heading="Computer Vision"
               body="Discover groundbreaking advancements in our Computer Vision and Image Processing initiatives, revealing concealed insights and utilizing visual intelligence for advantageous actionable results."
@@ -160,7 +178,7 @@ function Portfolio() {
           </div>
 
           {/* Data Analytics */}
-          <div className="mb-[27rem] lg:mb-72 mt-10 relative">
+          <div className="mb-[27rem] lg:mb-72 mt-10 relative" ref={ref3}>
             <PortfoliomainSection
               heading="Data Analytics"
               body="Unleash the potential of your data with our state-of-the-art Analytics and Visualization projects, empowering informed decision-making through valuable insights"
@@ -170,7 +188,7 @@ function Portfolio() {
           </div>
 
           {/* Other Products */}
-          <div className="mb-[27rem] lg:mb-72 mt-10 relative">
+          <div className="mb-[27rem] lg:mb-72 mt-10 relative" ref={ref4}>
             <PortfoliomainSection
               heading="Other Products"
               body="We offer ourselves as Technology Partner for Product Development. Our existing products are Retail Viewlytics Pro, AgriWheels, LogiBot: LLM based Chatbot"

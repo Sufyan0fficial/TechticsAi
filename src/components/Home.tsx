@@ -10,6 +10,8 @@ import accelerator from "../../public/accelerator.svg";
 import Cplusplus from "../../public/c++.svg";
 import ShadcnCarousel from "./Carousel";
 import AboutusComp from "./AboutusComp";
+import ExploreButton from "./Buttons";
+import Link from "next/link";
 
 function Home() {
   return (
@@ -26,7 +28,7 @@ function Home() {
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-          className="flex justify-center items-start rounded-3xl overflow-hidden flex-col"
+          className="flex justify-center items-start rounded-3xl overflow-hidden flex-col "
         >
           <div className="flex flex-col justify-end items-center gap-8 relative  h-1/2 w-full">
             <div className="font-Michroma lg:text-4xl md:text-2xl text-lg uppercase  text-center semibold tracking-tight">
@@ -38,12 +40,14 @@ function Home() {
               Natural Language Processing, Generative AI, Data Analytics, and
               Pattern Recognition...
             </p>
-            <button className="bg-gradient-to-br from-[#0056F8] to-[#45E7FF] text-white font-Montserrat font-semibold tracking-widest rounded-sm px-10 py-3 uppercase mb-4">
-              Start Exploring
-            </button>
+
+            {/* Custom Button */}
+            <Link href="/Services">
+              <ExploreButton />
+            </Link>
           </div>
 
-          <div className="flex justify-center w-full  items-center h-1/2">
+          <div className="flex justify-center w-full  items-center h-1/2 ">
             <div
               style={{
                 backgroundImage: `url('/robohand.svg')`,
@@ -54,7 +58,7 @@ function Home() {
                 mixBlendMode: "screen",
                 backgroundRepeat: "no-repeat",
               }}
-              className="w-1/2 min-[700px]:w-1/3  lg:w-1/4 aspect-square "
+              className="w-1/2 min-[700px]:w-1/3  lg:w-[22%] aspect-square "
             ></div>
           </div>
         </div>

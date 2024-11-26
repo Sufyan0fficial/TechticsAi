@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import mainimg from "../../public/hometeamimg.png";
+import Link from "next/link";
+import "@/components/button.css";
 
 function AboutusComp() {
   return (
@@ -15,18 +17,20 @@ function AboutusComp() {
           and Pattern Recognition, we craft cutting-edge technologies to address
           complex challenges and drive impactful results.
         </p>
-        <button
-          className="uppercase font-Montserrat tracking-widest text-sm text-black px-10 py-3 rounded-md  font-semibold w-max bg-[#45E7FF]
-
-
-"
-          // style={{
-          //   background:
-          //     "linear-gradient(112.97deg, #45E7FF 47.37%, #0056F8 163.04%)",
-          // }}
+        {/* <button
+          className="uppercase font-Montserrat tracking-widest text-sm text-black px-10 py-3 rounded-md  font-semibold w-max  "
+          style={{
+            background:
+              "linear-gradient(95.55deg, #45E7FF 37.1%, #41FE51 116.54%)",
+          }}
         >
           Know more
-        </button>
+        </button> */}
+        <Link href="/Contactus">
+          <button className="button genbutton py-4 px-10 !tracking-widest uppercase">
+            Know More
+          </button>
+        </Link>
       </div>
       <div className="lg:w-1/2 w-full relative aspect-video xl:aspect-video lg:aspect-[1/0.5]">
         <Image

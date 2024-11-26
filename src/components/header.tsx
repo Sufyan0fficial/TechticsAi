@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import logo from "../../public/Techticslogo.svg";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import "@/components/button.css";
 
 function Header() {
   const [isscroll, setisscroll] = useState(false);
@@ -86,8 +87,8 @@ function Header() {
             </Link>
           </div>
           <Link href="/Contactus">
-            <button className="font-Montserrat font-semibold text-base text-black bg-gradient-to-r from-[#FEFC45] to-[#41FE51] text-center w-[215px] h-[50px] rounded-md uppercase tracking-widest hidden lg:block hover:from-white hover:to-white ">
-              Consult us
+            <button className="button contactbutton py-4 px-10 !tracking-wider ">
+              <span className="pr-1 text-xl">☎</span> Consult Us
             </button>
           </Link>
           <div className="block lg:hidden relative md:w-14 md:h-14 w-10 h-10">
@@ -107,12 +108,6 @@ function Header() {
               />
             )}
           </div>
-
-          {/* {clicked && (
-            <div className="fixed left-0 top-[96px] h-screen w-full border lg:hidden flex  justify-center bg-red-500">
-              <div className="text-white font-bold text-4xl  ">Hello world</div>
-            </div>
-          )} */}
         </div>
         {clicked && (
           <div className="flex flex-col gap-6 font-Montserrat text-white text-xl tracking-widest font-extrabold items-center justify-center mt-20 md:mt-28 md:text-2xl lg:hidden">

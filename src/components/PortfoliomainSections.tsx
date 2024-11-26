@@ -41,7 +41,7 @@ function PortfoliomainSection({
   return (
     <div>
       <div
-        className={`md:bg-gradient-to-r from-[#0056F8] to-[#45E7FF] bg-gradient-to-b rounded-3xl  px-10  w-full xl:pt-32 xl:pb-32 ${
+        className={`bg-transparent border-4  rounded-3xl  px-10  w-full xl:pt-32 xl:pb-32 ${
           iconimg ? "xl:pt-28 xl:pb-24 lg:pt-40  md:pt-28 pt-24 " : ""
         } lg:py-24 pt-16  pb-40 flex flex-col lg:relative md:w-[80%] lg:w-full `}
       >
@@ -67,7 +67,7 @@ function PortfoliomainSection({
               {body}
             </div>
             <Link href={href}>
-              <button className="uppercase font-Montserrat tracking-widest text-sm text-black px-10 py-3 rounded-md bg-gradient-to-r from-[#45E7FF] to-[#0056F8] font-semibold w-max">
+              <button className="uppercase font-Montserrat tracking-widest text-sm  px-10 py-5 rounded-md  font-semibold w-max border-2">
                 Know more
               </button>
             </Link>
