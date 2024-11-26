@@ -60,7 +60,14 @@ function PortfoliomainSection({
                 </div>
               </div>
             )}
-            <h3 className="text-center md:text-left">{heading}</h3>
+            <h3
+              className="text-center md:text-left font-bold lg:text-4xl tracking-wider"
+              style={{
+                lineHeight: 1.3,
+              }}
+            >
+              {heading}
+            </h3>
             <div
               className={`text-center md:text-start pr-6 font-medium ${bodycolor}`}
             >

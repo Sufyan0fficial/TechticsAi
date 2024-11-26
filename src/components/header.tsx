@@ -86,7 +86,7 @@ function Header() {
               Blogs
             </Link>
           </div>
-          <Link href="/Contactus">
+          <Link href="/Contactus" className="hidden lg:block">
             <button className="button contactbutton py-4 px-10 !tracking-wider ">
               <span className="pr-1 text-xl">☎</span> Consult Us
             </button>
