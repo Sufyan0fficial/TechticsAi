@@ -28,7 +28,7 @@ function Portfolio() {
 
   return (
     <div
-      className={`${isinView1 ? "bg-[#1a5aff]" : "bg-inherit"} ${
+      className={`${isinView1 ? "bg-blue-700" : "bg-inherit"} ${
         isinView2 ? "bg-teal-500" : "bg-inherit"
       } ${isinView3 ? "bg-green-900" : "bg-inherit"} ${
         isinView4 ? "bg-inherit " : "bg-inherit"
