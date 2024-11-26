@@ -21,9 +21,9 @@ function Portfolio() {
   const ref2 = useRef(null);
   const ref3 = useRef(null);
   const ref4 = useRef(null);
-  const isinView1 = useInView(ref1, { amount: 0.1 });
-  const isinView2 = useInView(ref2, { amount: 0 });
-  const isinView3 = useInView(ref3, { amount: 0.1 });
+  const isinView1 = useInView(ref1);
+  const isinView2 = useInView(ref2);
+  const isinView3 = useInView(ref3);
   const isinView4 = useInView(ref4);
 
   return (
