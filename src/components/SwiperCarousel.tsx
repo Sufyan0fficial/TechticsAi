@@ -13,7 +13,7 @@ const roboto = Roboto({
   variable: "--font-roboto",
 });
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -65,11 +65,11 @@ const Data = [
 export default function SwiperCarousel() {
   return (
     <>
-      <Container maxWidth="xl" className="lg:mt-20">
+      <Container maxWidth="xl" className="lg:mt-28">
         <Swiper
           loop={true}
           effect={"coverflow"}
-          grabCursor={true}
+          grabCursor={false}
           centeredSlides={true}
           spaceBetween={30}
           slidesPerView={3}
@@ -85,7 +85,11 @@ export default function SwiperCarousel() {
             clickable: true,
           }}
           modules={[EffectCoverflow, Pagination, Autoplay]}
-          autoplay={{ delay: 3000 }}
+          autoplay={{
+            delay: 2000,
+            // pauseOnMouseEnter: true,
+            // disableOnInteraction: false,
+          }}
           speed={800}
           className="mySwiper lg:!pb-20 !pb-14  "
           breakpointsBase="window"
@@ -117,10 +121,10 @@ export default function SwiperCarousel() {
           <div>
             {Data.map((profile, index) => (
               <SwiperSlide
-                className=" !flex flex-col justify-center items-center h-full  mt-20 "
+                className=" !flex flex-col justify-center items-center h-full   "
                 key={index}
               >
-                <Link href="/Services" className=" flex flex-col items-center">
+                <Link href="/Services" className=" flex flex-col items-center ">
                   <div className="relative  w-[402px] aspect-square  rounded-lg border border-[#FFFFFF66]">
                     <Image
                       src={profile.img}
@@ -133,7 +137,9 @@ export default function SwiperCarousel() {
                   <div className="uppercase text-xl text-center mt-5  mb-1 font-Michroma">
                     {profile.services}
                   </div>
-                  <div className="text-center">{profile.desc}</div>
+                  <div className="text-center text-wrap max-w-[32ch] ">
+                    {profile.desc}
+                  </div>
                 </Link>
               </SwiperSlide>
             ))}

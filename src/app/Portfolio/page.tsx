@@ -15,6 +15,10 @@ import img2 from "../../../public/portfolioimg2.jpg";
 import img3 from "../../../public/portfolioimg3.jpg";
 import img4 from "../../../public/portfolioimg4.jpg";
 import { useInView } from "motion/react";
+import AnimatedWrapper from "@/components/MotionWrapper";
+import Link from "next/link";
+import ExploreButton from "@/components/Buttons";
+import "@/components/button.css";
 
 function Portfolio() {
   const ref1 = useRef(null);
@@ -48,33 +52,48 @@ function Portfolio() {
           className="flex justify-center items-start rounded-3xl overflow-hidden flex-col "
         >
           <div className="flex flex-col justify-end items-center gap-8 relative  h-1/2 w-full">
-            <div className="font-Michroma lg:text-4xl md:text-2xl text-lg uppercase  text-center semibold tracking-tight">
-              advanced ai & <br /> data technology
-            </div>
-            <p className="font-Montserrat text-sm md:text-base lg:text-lg font-medium text-center max-w-[70ch] px-6">
-              Welcome to Techtics.ai, your premier destination for cutting-edge
-              AI solutions. With expertise in Computer Vision, Image Processing,
-              Natural Language Processing, Generative AI, Data Analytics, and
-              Pattern Recognition...
-            </p>
-            <button className="bg-gradient-to-br from-[#0056F8] to-[#45E7FF] text-white font-Montserrat font-semibold tracking-widest rounded-sm px-10 py-3 uppercase mb-4">
-              Start Exploring
-            </button>
+            <AnimatedWrapper from="left" delay={0.3} duration={1.3}>
+              <div className="font-Michroma lg:text-4xl md:text-2xl text-lg uppercase  text-center semibold tracking-tight">
+                advanced ai & <br /> data technology
+              </div>
+            </AnimatedWrapper>
+            <AnimatedWrapper from="top" duration={1.3}>
+              <p className="font-Montserrat text-sm md:text-base lg:text-lg font-medium text-center max-w-[70ch] px-6">
+                Welcome to Techtics.ai, your premier destination for
+                cutting-edge AI solutions. With expertise in Computer Vision,
+                Image Processing, Natural Language Processing, Generative AI,
+                Data Analytics, and Pattern Recognition...
+              </p>
+            </AnimatedWrapper>
+
+            {/* Custom Button */}
+            <AnimatedWrapper from="bottom" delay={0.4} duration={1.3}>
+              <Link href="/Services">
+                <ExploreButton />
+              </Link>
+            </AnimatedWrapper>
           </div>
 
-          <div className="flex justify-center w-full  items-center h-1/2">
-            <div
-              style={{
-                backgroundImage: `url('/robohand.svg')`,
-                // width: "327px",
-                // height: "252px",
-                // backgroundPosition: "bottom",
-                backgroundSize: "contain",
-                mixBlendMode: "screen",
-                backgroundRepeat: "no-repeat",
-              }}
-              className="w-1/2 min-[700px]:w-1/3  lg:w-1/4 aspect-square "
-            ></div>
+          <div className="flex justify-center w-full  items-center h-1/2 ">
+            <AnimatedWrapper
+              from="bottom"
+              className=" h-full flex justify-center w-full  items-center"
+              delay={0.7}
+              duration={1.3}
+            >
+              <div
+                style={{
+                  backgroundImage: `url('/robohand.svg')`,
+                  // width: "327px",
+                  // height: "252px",
+                  // backgroundPosition: "bottom",
+                  backgroundSize: "contain",
+                  mixBlendMode: "screen",
+                  backgroundRepeat: "no-repeat",
+                }}
+                className="w-1/2 min-[700px]:w-1/3  lg:w-[22%] aspect-square "
+              ></div>
+            </AnimatedWrapper>
           </div>
         </div>
 
@@ -164,6 +183,7 @@ function Portfolio() {
               body="Explore new horizons with our advanced NLP and Generative AI projects, revolutionizing language understanding and content generation for boundless possibilities."
               iconimg={brain}
               mainimg={img1}
+              custombutton="portfoliobutton1 button"
             />
           </div>
 
@@ -174,6 +194,7 @@ function Portfolio() {
               body="Discover groundbreaking advancements in our Computer Vision and Image Processing initiatives, revealing concealed insights and utilizing visual intelligence for advantageous actionable results."
               iconimg={vision}
               mainimg={img2}
+              custombutton="button portfoliobutton2"
             />
           </div>
 
@@ -184,6 +205,7 @@ function Portfolio() {
               body="Unleash the potential of your data with our state-of-the-art Analytics and Visualization projects, empowering informed decision-making through valuable insights"
               iconimg={Analytics}
               mainimg={img3}
+              custombutton="button portfoliobutton3"
             />
           </div>
 
@@ -194,6 +216,7 @@ function Portfolio() {
               body="We offer ourselves as Technology Partner for Product Development. Our existing products are Retail Viewlytics Pro, AgriWheels, LogiBot: LLM based Chatbot"
               iconimg={otherproduct}
               mainimg={img4}
+              custombutton="button portfoliobutton4"
             />
           </div>
         </div>

@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import Image, { StaticImageData } from "next/image";
 import manger from "../../public/manger.jpg";
+import Avatar from "@mui/material/Avatar";
 
 interface CommentType {
   comment: string;
@@ -73,6 +74,12 @@ export default function CarouselDemo() {
                     backgroundRepeat: "no-repeat",
                   }}
                 >
+                  <Avatar
+                    alt=""
+                    src={manger.src}
+                    sx={{ width: "60%", height: "60%" }}
+                    className=" mt-2 ml-[6px]"
+                  ></Avatar>
                   {/* <div className="relative w-[75px] h-[70px]">
                     <Image
                       src={item.img}

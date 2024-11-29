@@ -11,10 +11,11 @@ import memory from "../../../public/blueprint.svg";
 import LeaveaReply from "@/components/LeaveaReply";
 import servicesengagingimg from "../../../public/servicesengagingimg.jpg";
 import product from "../../../public/product.svg";
+import AnimatedWrapper from "@/components/MotionWrapper";
 
 function Services() {
   return (
-    <div>
+    <div className="overflow-hidden">
       {/* hero section */}
       <div
         style={{
@@ -27,12 +28,21 @@ function Services() {
         }}
         className="flex justify-center "
       >
-        <h2 className="flex flex-col md:flex-row justify-between items-center md:mt-80 w-full mt-32 h-[480px] md:h-max ">
-          <span className="w-full md:w-1/3 xl:text-right ">Unlock power</span>
+        <h2 className="flex flex-col md:flex-row justify-between items-center md:mt-80 w-full mt-32 h-[480px] md:h-max">
+          <AnimatedWrapper
+            from="left"
+            className="w-full md:w-1/3 xl:text-right "
+          >
+            Unlock power
+          </AnimatedWrapper>
 
-          <span className="text-white w-full md:w-1/3 xl:text-left">
+          <AnimatedWrapper
+            from="right"
+            delay={0.3}
+            className="text-white w-full md:w-1/3 xl:text-left"
+          >
             of your brand
-          </span>
+          </AnimatedWrapper>
         </h2>
       </div>
 
@@ -40,15 +50,21 @@ function Services() {
         <Container maxWidth="xl">
           {/* Custom IT Solutions */}
           <div className="flex flex-col gap-6  lg:pt-0 -mt-36 pt-10">
-            <h2 className="font-Michroma text-[#45E7FF]  uppercase text-center">
-              custom IT solutions for your business
-            </h2>
-            <p className="font-Montserrat md:text-lg text-sm text-white text-center">
+            <AnimatedWrapper from="bottom" initialY={50} opacity={0.3}>
+              <h2 className="font-Michroma text-[#45E7FF]  uppercase text-center">
+                custom IT solutions for your business
+              </h2>
+            </AnimatedWrapper>
+            <p className="font-Montserrat md:text-lg text-sm text-white text-center mt-4 mb-10">
               We deal with all aspects of professional IT services
             </p>
 
             <div className="flex flex-wrap justify-center items-stretch gap-10 md:gap-6  md:mt-8 mt-10 ">
-              <div className="lg:w-[30%] md:w-[45%] w-full  flex justify-center items-center flex-col md:gap-10 gap-6 ">
+              <AnimatedWrapper
+                from="left"
+                initialX={-50}
+                className="lg:w-[30%] md:w-[45%] w-full  flex justify-center items-center flex-col md:gap-10 gap-6 "
+              >
                 <div
                   className="lg:w-[200px] lg:h-[200px] md:w-[170px] md:h-[170px] w-[120px] h-[120px] flex justify-center items-center "
                   style={{
@@ -76,8 +92,13 @@ function Services() {
                     and adaptability
                   </p>
                 </div>
-              </div>
-              <div className="lg:w-1/3 md:w-1/2 w-full  flex justify-center items-center flex-col md:gap-10 gap-6 ">
+              </AnimatedWrapper>
+              <AnimatedWrapper
+                from="left"
+                initialX={-50}
+                delay={0.5}
+                className="lg:w-1/3 md:w-1/2 w-full  flex justify-center items-center flex-col md:gap-10 gap-6 "
+              >
                 <div
                   className="lg:w-[200px] lg:h-[200px] md:w-[170px] md:h-[170px] w-[120px] h-[120px] flex justify-center items-center"
                   style={{
@@ -105,8 +126,13 @@ function Services() {
                     evolving needs effectively.
                   </p>
                 </div>
-              </div>
-              <div className="lg:w-1/3 md:w-1/2 w-full  flex justify-center items-center flex-col md:gap-10 gap-6 md:mt-10 lg:mt-0">
+              </AnimatedWrapper>
+              <AnimatedWrapper
+                from="left"
+                initialX={-50}
+                delay={1}
+                className="lg:w-1/3 md:w-1/2 w-full  flex justify-center items-center flex-col md:gap-10 gap-6 md:mt-10 lg:mt-0"
+              >
                 <div
                   className="lg:w-[200px] lg:h-[200px] md:w-[170px] md:h-[170px] w-[120px] h-[120px] flex justify-center items-center"
                   style={{
@@ -134,28 +160,43 @@ function Services() {
                     regulatory adherence
                   </p>
                 </div>
-              </div>
+              </AnimatedWrapper>
             </div>
           </div>
 
           {/* IT SERVICES */}
           <div className="mt-36 md:mt-40 lg:mt-56">
-            <h2 className="text-white -mb-8 md:-mb-6">IT Services</h2>
+            <AnimatedWrapper from="bottom">
+              <h2 className="text-white -mb-8 md:mb-0 md:mt-">IT Services</h2>
+            </AnimatedWrapper>
             <SwiperCarousel />
           </div>
 
           {/* CREATIVE AND CONSULTING */}
-          <div className="mt-40">
-            <h2 className="text-white -mb-5 ">Creative and Consulting</h2>
+          <div className="mt-40 md:mt-44  ">
+            <AnimatedWrapper from="bottom">
+              <h2 className="text-white -mb-5 ">Creative and Consulting</h2>
+            </AnimatedWrapper>
             <SwiperCarousel />
           </div>
 
           {/* Engage with us  */}
 
           <div className="mt-40">
-            <h2>Engage with us</h2>
+            <AnimatedWrapper
+              from="bottom"
+              initialY={30}
+              amount={0.5}
+              opacity={0.5}
+            >
+              <h2>Engage with us</h2>
+            </AnimatedWrapper>
             <div className="flex flex-col lg:flex-row lg:gap-16 gap-8 mt-10 md:mt-20">
-              <div className="lg:w-1/2  w-full aspect-square md:aspect-[1/0.7]   relative">
+              <AnimatedWrapper
+                from="left"
+                amount={0.4}
+                className="lg:w-1/2  w-full aspect-square md:aspect-[1/0.7]   relative"
+              >
                 <Image
                   src={servicesengagingimg}
                   alt="Robohand image"
@@ -163,9 +204,12 @@ function Services() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover object-center rounded-2xl border border-[#F4F4F4]"
                 />
-              </div>
+              </AnimatedWrapper>
               <div className="lg:w-1/2 w-full flex flex-col lg:justify-center lg:gap-16 gap-4">
-                <div className="flex justify-center gap-8 items-center  ">
+                <AnimatedWrapper
+                  from="bottom"
+                  className="flex justify-center gap-8 items-center  "
+                >
                   <div
                     className="lg:w-1/3 w-1/4 aspect-square flex justify-center items-center"
                     style={{
@@ -192,8 +236,11 @@ function Services() {
                       Vivamus neque nibh, pellentesque sed felis
                     </p>
                   </div>
-                </div>
-                <div className="flex justify-center  gap-8 items-center flex-row-reverse lg:flex-row text-right lg:text-left">
+                </AnimatedWrapper>
+                <AnimatedWrapper
+                  from="bottom"
+                  className="flex justify-center  gap-8 items-center flex-row-reverse lg:flex-row text-right lg:text-left"
+                >
                   <div
                     className="lg:w-1/3 w-1/4 aspect-square flex justify-center items-center"
                     style={{
@@ -220,14 +267,14 @@ function Services() {
                       Vivamus neque nibh, pellentesque sed felis
                     </p>
                   </div>
-                </div>
+                </AnimatedWrapper>
               </div>
             </div>
           </div>
 
           {/* Our Portfolio */}
 
-          <div className="mt-44">
+          <div className="mt-44 ">
             <div
               className="rounded-3xl pt-20 pb-60"
               style={{
@@ -235,19 +282,32 @@ function Services() {
               }}
             >
               <div className=" flex flex-col items-center">
-                <h2 className="text-white">Our portfolio</h2>
-                <p className="text-black text-center w-[60%] md:mt-4 mt-2">
+                <AnimatedWrapper from="left" ease="easeInOut" duration={1.2}>
+                  <h2 className="text-white">Our portfolio</h2>
+                </AnimatedWrapper>
+
+                <AnimatedWrapper
+                  from="right"
+                  duration={1.2}
+                  delay={0.4}
+                  className="text-black text-center w-[60%] md:mt-4 mt-2 text-xs md:text-sm lg:text-base"
+                >
                   Contrary to popular belief, Lorem Ipsum is not simply random
                   text. It has roots in a piece of classical Latin literature
                   from 45 BC, making it over 2000 years old. Richard McClintock,
                   a Latin professor at Hampden-Sydney College in Virginia,
                   looked up one of the more obscure Latin words, consectetur,
                   from a Lorem Ipsum passage.
-                </p>
+                </AnimatedWrapper>
               </div>
             </div>
             <div className="flex  w-full justify-center  gap-x-7 gap-y-16 flex-wrap">
-              <div className="lg:w-[30%] md:w-[45%] w-[90%] aspect-[1/0.7] -mt-32  rounded-xl flex flex-col items-center justify-between bg-[#D1FFFF] p-6 pb-8">
+              <AnimatedWrapper
+                from="bottom"
+                amount={0.5}
+                duration={1.3}
+                className="lg:w-[30%] md:w-[45%] w-[90%] aspect-[1/0.7] -mt-32  rounded-xl flex flex-col items-center justify-between bg-[#D1FFFF] p-6 pb-8 "
+              >
                 <div className="relative w-[40%] aspect-square -mt-20 ">
                   <Image
                     src={brain}
@@ -271,8 +331,14 @@ function Services() {
                     Read More
                   </button>
                 </div>
-              </div>
-              <div className="lg:w-[30%] md:w-[45%] w-[90%] aspect-[1/0.7] md:-mt-32  rounded-xl flex flex-col items-center justify-between bg-[#D1FFFF] p-6 pb-8">
+              </AnimatedWrapper>
+              <AnimatedWrapper
+                from="bottom"
+                amount={0.8}
+                duration={1.4}
+                // delay={0.5}
+                className="lg:w-[30%] md:w-[45%] w-[90%] aspect-[1/0.7] md:-mt-32  rounded-xl flex flex-col items-center justify-between bg-[#D1FFFF] p-6 pb-8"
+              >
                 <div className="relative w-[40%] aspect-square -mt-20 ">
                   <Image
                     src={vision}
@@ -296,8 +362,14 @@ function Services() {
                     Read More
                   </button>
                 </div>
-              </div>
-              <div className="lg:w-[30%] md:w-[45%] w-[90%] aspect-[1/0.7] lg:-mt-32  rounded-xl flex flex-col items-center justify-between bg-[#D1FFFF] p-6 pb-8">
+              </AnimatedWrapper>
+              <AnimatedWrapper
+                from="bottom"
+                amount={1}
+                duration={1.5}
+                // delay={0.4}
+                className="lg:w-[30%] md:w-[45%] w-[90%] aspect-[1/0.7] lg:-mt-32  rounded-xl flex flex-col items-center justify-between bg-[#D1FFFF] p-6 pb-8"
+              >
                 <div className="relative w-[40%] aspect-square -mt-20 ">
                   <Image
                     src={memory}
@@ -320,7 +392,7 @@ function Services() {
                     Read More
                   </button>
                 </div>
-              </div>
+              </AnimatedWrapper>
             </div>
           </div>
 

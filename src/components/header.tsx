@@ -43,7 +43,7 @@ function Header() {
     >
       <Container maxWidth="lg">
         <div className="flex justify-between items-center h-full">
-          <div className="w-[200px] md:w-[300px] h-[49px] relative">
+          <Link href="/" className="w-[200px] md:w-[300px] h-[49px] relative">
             <Image
               src={logo}
               alt="Logo"
@@ -51,20 +51,20 @@ function Header() {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-center object-contain"
             />
-          </div>
+          </Link>
           <div className="font-Montserrat font-semibold text-base text-white uppercase  gap-6 justify-center items-center flex-grow tracking-widest lg:flex hidden">
             <Link
-              href="/AboutUs"
+              href="/about"
               className={`hover:text-[#45E7FF] transition-colors duration-500 ${
-                pathname === "/AboutUs" ? "text-[#45E7FF]" : ""
+                pathname === "/about" ? "text-[#45E7FF]" : ""
               }`}
             >
               About us
             </Link>
             <Link
-              href="/Services"
+              href="/services"
               className={`hover:text-[#45E7FF] transition-colors duration-500 ${
-                pathname === "/Services" ? "text-[#45E7FF] " : ""
+                pathname === "/services" ? "text-[#45E7FF] " : ""
               }`}
             >
               Services
@@ -80,13 +80,13 @@ function Header() {
             <Link
               href="/"
               className={`hover:text-[#45E7FF] transition-colors duration-500 ${
-                pathname === "/Blogs" ? "text-[#45E7FF]" : ""
+                pathname === "/blogs" ? "text-[#45E7FF]" : ""
               }`}
             >
               Blogs
             </Link>
           </div>
-          <Link href="/Contactus" className="hidden lg:block">
+          <Link href="/contact" className="hidden lg:block">
             <button className="button contactbutton py-4 px-10 !tracking-wider ">
               <span className="pr-1 text-xl">☎</span> Consult Us
             </button>
@@ -112,14 +112,14 @@ function Header() {
         {clicked && (
           <div className="flex flex-col gap-6 font-Montserrat text-white text-xl tracking-widest font-extrabold items-center justify-center mt-20 md:mt-28 md:text-2xl lg:hidden">
             <Link
-              href="/AboutUs"
+              href="/about"
               className="uppercase hover:text-[#45E7FF]"
               onClick={() => setclicked((pre) => !pre)}
             >
               About us
             </Link>
             <Link
-              href="/Services"
+              href="/services"
               className="uppercase hover:text-[#45E7FF]"
               onClick={() => setclicked((pre) => !pre)}
             >
@@ -139,7 +139,7 @@ function Header() {
             >
               Blogs
             </Link>
-            <Link href="/Contactus" onClick={() => setclicked((pre) => !pre)}>
+            <Link href="/contact" onClick={() => setclicked((pre) => !pre)}>
               <button className="font-Montserrat font-semibold text-base text-black bg-gradient-to-r from-[#FEFC45] to-[#41FE51] text-center w-[215px] h-[50px] rounded-md uppercase tracking-widest block lg:hidden hover:from-white hover:to-white ">
                 Consult us
               </button>

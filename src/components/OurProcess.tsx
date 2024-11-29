@@ -8,6 +8,7 @@ import headphone from "../../public/headphone.svg";
 import chatbot from "../../public/chatimage.svg";
 import Image from "next/image";
 import { useScroll, useTransform, motion } from "motion/react";
+import AnimatedWrapper from "./MotionWrapper";
 function OurProcess() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -85,7 +86,12 @@ function OurProcess() {
               </div> */}
             <div className="flex flex-col justify-between  h-full">
               <div className="flex justify-between">
-                <div className="relative w-1/3 aspect-square ">
+                <AnimatedWrapper
+                  from="left"
+                  amount={1}
+                  delay={1}
+                  className="relative w-1/3 aspect-square "
+                >
                   <Image
                     src={chatbot}
                     alt="chat image"
@@ -93,8 +99,13 @@ function OurProcess() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-center object-contain"
                   />
-                </div>
-                <div className="relative w-1/3 aspect-square">
+                </AnimatedWrapper>
+                <AnimatedWrapper
+                  from="right"
+                  delay={1.2}
+                  amount={1}
+                  className="relative w-1/3 aspect-square"
+                >
                   <Image
                     src={recycle}
                     alt="chat image"
@@ -102,7 +113,7 @@ function OurProcess() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-center object-contain"
                   />
-                </div>
+                </AnimatedWrapper>
               </div>
               <div className=" flex justify-center items-center border-l-2 md:border-l-2 lg:border-l-4 border-l-pink-600 ">
                 <h2>
@@ -110,7 +121,12 @@ function OurProcess() {
                 </h2>
               </div>
               <div className="flex justify-between">
-                <div className="relative w-1/3 aspect-square ">
+                <AnimatedWrapper
+                  from="left"
+                  delay={1.3}
+                  amount={0.8}
+                  className="relative w-1/3 aspect-square "
+                >
                   <Image
                     src={headphone}
                     alt="chat image"
@@ -118,8 +134,13 @@ function OurProcess() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-center object-contain"
                   />
-                </div>
-                <div className="relative w-1/3 aspect-square ">
+                </AnimatedWrapper>
+                <AnimatedWrapper
+                  from="right"
+                  delay={1.5}
+                  amount={0.8}
+                  className="relative w-1/3 aspect-square "
+                >
                   <Image
                     src={bulb}
                     alt="chat image"
@@ -127,7 +148,7 @@ function OurProcess() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-center object-contain"
                   />
-                </div>
+                </AnimatedWrapper>
               </div>
             </div>
           </div>

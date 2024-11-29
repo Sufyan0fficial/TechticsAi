@@ -12,10 +12,11 @@ import ShadcnCarousel from "./Carousel";
 import AboutusComp from "./AboutusComp";
 import ExploreButton from "./Buttons";
 import Link from "next/link";
+import AnimatedWrapper from "./MotionWrapper";
 
 function Home() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Container maxWidth="xl">
         {/* hero section */}
 
@@ -31,54 +32,86 @@ function Home() {
           className="flex justify-center items-start rounded-3xl overflow-hidden flex-col "
         >
           <div className="flex flex-col justify-end items-center gap-8 relative  h-1/2 w-full">
-            <div className="font-Michroma lg:text-4xl md:text-2xl text-lg uppercase  text-center semibold tracking-tight">
-              advanced ai & <br /> data technology
-            </div>
-            <p className="font-Montserrat text-sm md:text-base lg:text-lg font-medium text-center max-w-[70ch] px-6">
-              Welcome to Techtics.ai, your premier destination for cutting-edge
-              AI solutions. With expertise in Computer Vision, Image Processing,
-              Natural Language Processing, Generative AI, Data Analytics, and
-              Pattern Recognition...
-            </p>
+            <AnimatedWrapper from="left" delay={0.3} duration={1.3}>
+              <div className="font-Michroma lg:text-4xl md:text-2xl text-lg uppercase  text-center semibold tracking-tight">
+                advanced ai & <br /> data technology
+              </div>
+            </AnimatedWrapper>
+            <AnimatedWrapper from="top" duration={1.3}>
+              <p className="font-Montserrat text-sm md:text-base lg:text-lg font-medium text-center max-w-[70ch] px-6">
+                Welcome to Techtics.ai, your premier destination for
+                cutting-edge AI solutions. With expertise in Computer Vision,
+                Image Processing, Natural Language Processing, Generative AI,
+                Data Analytics, and Pattern Recognition...
+              </p>
+            </AnimatedWrapper>
 
             {/* Custom Button */}
-            <Link href="/Services">
-              <ExploreButton />
-            </Link>
+            <AnimatedWrapper from="bottom" delay={0.4} duration={1.3}>
+              <Link href="/Services">
+                <ExploreButton />
+              </Link>
+            </AnimatedWrapper>
           </div>
 
           <div className="flex justify-center w-full  items-center h-1/2 ">
-            <div
-              style={{
-                backgroundImage: `url('/robohand.svg')`,
-                // width: "327px",
-                // height: "252px",
-                // backgroundPosition: "bottom",
-                backgroundSize: "contain",
-                mixBlendMode: "screen",
-                backgroundRepeat: "no-repeat",
-              }}
-              className="w-1/2 min-[700px]:w-1/3  lg:w-[22%] aspect-square "
-            ></div>
+            <AnimatedWrapper
+              from="bottom"
+              className=" h-full flex justify-center w-full  items-center"
+              delay={0.7}
+              duration={1.3}
+            >
+              <div
+                style={{
+                  backgroundImage: `url('/robohand.svg')`,
+                  // width: "327px",
+                  // height: "252px",
+                  // backgroundPosition: "bottom",
+                  backgroundSize: "contain",
+                  mixBlendMode: "screen",
+                  backgroundRepeat: "no-repeat",
+                }}
+                className="w-1/2 min-[700px]:w-1/3  lg:w-[22%] aspect-square "
+              ></div>
+            </AnimatedWrapper>
           </div>
         </div>
         {/* Unlock power of your brand */}
 
         <div className="mb-16 lg:mb-44 mt-10 relative">
           <h2 className="mb-10">Unlock the power of your brand</h2>
+
           <AboutusComp />
         </div>
 
         {/* team section */}
         <div className="flex flex-col gap-6 pt-36 lg:pt-0 ">
-          <h2 className="font-Michroma text-[#45E7FF]  uppercase text-center">
-            Highly Regarded Team
-          </h2>
-          <p className="font-Montserrat md:text-lg text-sm text-white text-center ">
-            We stand prepared to address your business challenges.
-          </p>
+          <AnimatedWrapper
+            from="bottom"
+            initialY={30}
+            amount={0.3}
+            opacity={0.5}
+          >
+            <h2 className="font-Michroma text-[#45E7FF]  uppercase text-center">
+              Highly Regarded Team
+            </h2>
+          </AnimatedWrapper>
+          <AnimatedWrapper
+            from="bottom"
+            initialY={20}
+            amount={0.5}
+            opacity={0.5}
+          >
+            <p className="font-Montserrat md:text-lg text-sm text-white text-center ">
+              We stand prepared to address your business challenges.
+            </p>
+          </AnimatedWrapper>
           <div className="flex flex-wrap justify-center items-stretch gap-10 md:gap-0 md:mt-6 mt-2 ">
-            <div className="lg:w-1/3 md:w-1/2 w-full  flex justify-center items-center flex-col md:gap-10 gap-6 ">
+            <AnimatedWrapper
+              className="lg:w-1/3 md:w-1/2 w-full  flex justify-center items-center flex-col md:gap-10 gap-6 "
+              from="left"
+              initialX={-50}
+            >
               <div
                 className="lg:w-[200px] lg:h-[200px] md:w-[170px] md:h-[170px] w-[120px] h-[120px] flex justify-center items-center "
                 style={{
@@ -105,8 +138,14 @@ function Home() {
                   Active users
                 </p>
               </div>
-            </div>
-            <div className="lg:w-1/3 md:w-1/2 w-full  flex justify-center items-center flex-col md:gap-10 gap-6 ">
+            </AnimatedWrapper>
+
+            <AnimatedWrapper
+              className="lg:w-1/3 md:w-1/2 w-full  flex justify-center items-center flex-col md:gap-10 gap-6 "
+              from="left"
+              initialX={-50}
+              delay={0.5}
+            >
               <div
                 className="lg:w-[200px] lg:h-[200px] md:w-[170px] md:h-[170px] w-[120px] h-[120px] flex justify-center items-center"
                 style={{
@@ -133,8 +172,13 @@ function Home() {
                   Subject Matter Experts
                 </p>
               </div>
-            </div>
-            <div className="lg:w-1/3 md:w-1/2 w-full  flex justify-center items-center flex-col md:gap-10 gap-6 md:mt-10 lg:mt-0">
+            </AnimatedWrapper>
+            <AnimatedWrapper
+              className="lg:w-1/3 md:w-1/2 w-full  flex justify-center items-center flex-col md:gap-10 gap-6 md:mt-10 lg:mt-0"
+              from="left"
+              initialX={-50}
+              delay={1}
+            >
               <div
                 className="lg:w-[200px] lg:h-[200px] md:w-[170px] md:h-[170px] w-[120px] h-[120px] flex justify-center items-center"
                 style={{
@@ -161,22 +205,42 @@ function Home() {
                   Image Generated
                 </p>
               </div>
-            </div>
+            </AnimatedWrapper>
           </div>
         </div>
 
         {/* business solutions */}
         <div className="md:mb-36 md:mt-48 my-32">
-          <h2 className="font-Michroma text-[#45E7FF]  uppercase text-center">
-            Business Solutions
-          </h2>
+          <AnimatedWrapper
+            from="bottom"
+            initialY={20}
+            amount={0.5}
+            opacity={0.5}
+          >
+            <h2 className="font-Michroma text-[#45E7FF]  uppercase text-center">
+              Business Solutions
+            </h2>
+          </AnimatedWrapper>
           <div className="flex flex-wrap justify-center items-center   ">
-            <h3 className="font-Michroma w-full text-center uppercase mt-16 mb-2 md:hidden ">
-              <span className="text-[#45E7FF]">Natural Language</span> <br />
-              <span>Processing</span>
-            </h3>
+            <AnimatedWrapper
+              from="bottom"
+              initialY={30}
+              amount={0.5}
+              opacity={0.5}
+            >
+              <h3 className="font-Michroma w-full text-center uppercase mt-16 mb-2 md:hidden ">
+                <span className="text-[#45E7FF]">Natural Language</span> <br />
+                <span>Processing</span>
+              </h3>
+            </AnimatedWrapper>
+
             <div className="flex items-center justify-between w-full md:mt-20 ">
-              <div className="md:w-1/3 w-1/2 flex md:justify-center justify-start items-center">
+              <AnimatedWrapper
+                className="md:w-1/3 w-1/2 flex md:justify-center justify-start items-center"
+                from="left"
+                initialX={-40}
+                amount={0.5}
+              >
                 <div
                   className="lg:w-[220px] lg:h-[220px] md:w-[180px] md:h-[180px] w-[160px] h-[160px] flex justify-center items-center"
                   style={{
@@ -196,12 +260,27 @@ function Home() {
                     />
                   </div>
                 </div>
-              </div>
-              <h3 className="font-Michroma   text-center uppercase md:w-1/3 hidden md:block">
-                <span className="text-[#45E7FF]">Natural Language</span> <br />
-                <span>Processing</span>
-              </h3>
-              <div className="md:w-1/3 w-1/2 flex md:justify-center justify-end  items-center">
+              </AnimatedWrapper>
+              <AnimatedWrapper
+                from="bottom"
+                initialY={20}
+                amount={0.5}
+                delay={0.6}
+                className="md:w-1/3"
+              >
+                <h3 className="font-Michroma   text-center uppercase  hidden md:block">
+                  <span className="text-[#45E7FF]">Natural Language</span>{" "}
+                  <br />
+                  <span>Processing</span>
+                </h3>
+              </AnimatedWrapper>
+              <AnimatedWrapper
+                className="md:w-1/3 w-1/2 flex md:justify-center justify-end  items-center"
+                from="right"
+                initialY={40}
+                amount={0.5}
+                delay={0.3}
+              >
                 <div
                   className="lg:w-[220px] lg:h-[220px] md:w-[180px] md:h-[180px] w-[160px] h-[160px] flex justify-center items-center"
                   style={{
@@ -221,7 +300,7 @@ function Home() {
                     />
                   </div>
                 </div>
-              </div>
+              </AnimatedWrapper>
             </div>
             <ul className="flex justify-center items-center flex-wrap list-disc md:mt-6 text-xs md:text-sm 2xl:text-base">
               <li className="font-Montserrat font-medium md:w-1/2 w-full text-center md:text-end  md:pr-6 list-inside">
@@ -238,7 +317,11 @@ function Home() {
                 Hampden-Sydney College in Virginia
               </li>
             </ul>
-            <div className="md:w-1/3 flex justify-center items-center  md:mt-16 w-full">
+            <AnimatedWrapper
+              className="md:w-1/3 flex justify-center items-center  md:mt-16 w-full"
+              from="bottom"
+              delay={0.3}
+            >
               <div
                 className="lg:w-[220px] lg:h-[220px] md:w-[180px] md:h-[180px] w-[160px] h-[160px]  flex justify-center items-center"
                 style={{
@@ -258,17 +341,27 @@ function Home() {
                   />
                 </div>
               </div>
-            </div>
+            </AnimatedWrapper>
             <div></div>
           </div>
         </div>
 
         {/* Engagement Models */}
         <div className="">
-          <h2>Engagement Models</h2>
+          <AnimatedWrapper
+            from="bottom"
+            initialY={20}
+            amount={0.5}
+            opacity={0.5}
+          >
+            <h2>Engagement Models</h2>
+          </AnimatedWrapper>
           <div className="flex flex-col 2xl:gap-y-6 lg:gap-y-4 md:gap-y-5 md:mt-20 mt-10 ">
             <div className="flex md:flex-row flex-col md:justify-between w-full gap-6">
-              <div className="w-full md:w-1/2 flex justify-center  md:items-start items-center gap-6 ">
+              <AnimatedWrapper
+                from="left"
+                className="w-full md:w-1/2 flex justify-center  md:items-start items-center gap-6 "
+              >
                 <div>
                   <h3 className="text-[#54E8FF]">Consultancy</h3>
                   <ul className="list-disc list-inside text-xs md:text-sm 2xl:text-base">
@@ -295,8 +388,12 @@ function Home() {
                     />
                   </div>
                 </div>
-              </div>
-              <div className="w-full md:w-1/2 flex flex-row-reverse justify-center  md:items-start items-center gap-6">
+              </AnimatedWrapper>
+              <AnimatedWrapper
+                from="right"
+                delay={0.5}
+                className="w-full md:w-1/2 flex flex-row-reverse justify-center  md:items-start items-center gap-6"
+              >
                 <div>
                   <h3 className="text-[#54E8FF] ">Products</h3>
                   <ul className="list-disc list-inside text-xs md:text-sm 2xl:text-base ">
@@ -323,9 +420,14 @@ function Home() {
                     />
                   </div>
                 </div>
-              </div>
+              </AnimatedWrapper>
             </div>
-            <div className="w-full flex justify-center items-center ">
+            <AnimatedWrapper
+              // scale={1.2}
+              amount={0.8}
+              from="bottom"
+              className="w-full flex justify-center items-center animate-pulse"
+            >
               <div className="relative w-[250px] h-[250px] md:h-[px] lg:w-[280px] lg:h-[300px] min-[1400px]:h-[406px] md:-mt-9 -mb-6  lg:-mt-0 mt-10 ">
                 <Image
                   src={brainlikeimg}
@@ -335,9 +437,13 @@ function Home() {
                   className="object-center object-contain  "
                 />
               </div>
-            </div>
+            </AnimatedWrapper>
             <div className="flex flex-col md:flex-row w-full md:-mt-[70px] min-[1400px]:-mt-96 gap-6">
-              <div className="w-full md:w-1/2 flex md:justify-start justify-center md:items-start items-center gap-6 ">
+              <AnimatedWrapper
+                from="left"
+                delay={0.3}
+                className="w-full md:w-1/2 flex md:justify-start justify-center md:items-start items-center gap-6 "
+              >
                 <div>
                   <h3 className="text-[#54E8FF]">Accelerator</h3>
                   <ul className="list-disc list-inside text-xs md:text-sm 2xl:text-base">
@@ -364,10 +470,13 @@ function Home() {
                     />
                   </div>
                 </div>
-              </div>
-              {/* <div className="w-[280px] max-h-[406px] hidden lg:block border "></div> */}
+              </AnimatedWrapper>
 
-              <div className="w-full md:w-1/2 flex flex-row-reverse md:justify-start md:items-start items-center justify-center gap-6  ">
+              <AnimatedWrapper
+                from="right"
+                delay={0.6}
+                className="w-full md:w-1/2 flex flex-row-reverse md:justify-start md:items-start items-center justify-center gap-6  "
+              >
                 <div>
                   <h3 className="text-[#54E8FF]">Blueprint</h3>
                   <ul className="list-disc list-inside text-xs md:text-sm 2xl:text-base">
@@ -394,7 +503,7 @@ function Home() {
                     />
                   </div>
                 </div>
-              </div>
+              </AnimatedWrapper>
             </div>
           </div>
           <div></div>
@@ -402,7 +511,9 @@ function Home() {
 
         {/* Our Clients  */}
         <div className="mt-40 mb-36 md:mb-28 min-[1400px]:mt-72 ">
-          <h2 className="text-white md:mb-16 mb-10">Our Partner / Clients</h2>
+          <AnimatedWrapper from="bottom">
+            <h2 className="text-white md:mb-16 mb-10">Our Partner / Clients</h2>
+          </AnimatedWrapper>
           <div className="flex md:gap-6 gap-4 justify-center lg:gap-10 2xl:gap-14 flex-wrap items-center ">
             <div className="relative w-[83px] lg:h-[96px] md:h-[70px] h-[60px]  ">
               <Image
@@ -490,7 +601,9 @@ function Home() {
 
         {/* Clients Reviews */}
         <div className="mb-20  ">
-          <h2 className="text-white pb-14">Our clients journey with us</h2>
+          <AnimatedWrapper from="bottom">
+            <h2 className="text-white pb-14">Our clients journey with us</h2>
+          </AnimatedWrapper>
           <ShadcnCarousel />
         </div>
       </Container>

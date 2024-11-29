@@ -5,6 +5,7 @@ import neuro from "../../public/neurologo.svg";
 import next from "../../public/nextlogo.svg";
 import React from "react";
 import Link from "next/link";
+import AnimatedWrapper from "./MotionWrapper";
 interface AboutsSectionType {
   heading: string;
   body: string;
@@ -15,6 +16,7 @@ interface AboutsSectionType {
   bodycolor?: string;
   iconimg?: StaticImageData;
   href: string | URL;
+  custombutton?: string;
 }
 
 PortfoliomainSection.defaultProps = {
@@ -37,6 +39,7 @@ function PortfoliomainSection({
   bodycolor,
   iconimg,
   href,
+  custombutton,
 }: AboutsSectionType) {
   return (
     <div>
@@ -45,10 +48,13 @@ function PortfoliomainSection({
           iconimg ? "xl:pt-28 xl:pb-24 lg:pt-40  md:pt-28 pt-24 " : ""
         } lg:py-24 pt-16  pb-40 flex flex-col lg:relative md:w-[80%] lg:w-full `}
       >
-        <div className="flex  ">
-          <div className="lg:w-[40%]  flex flex-col gap-6 items-center md:items-start  ">
+        <div className="flex ">
+          <div className="lg:w-[45%]  flex flex-col gap-10 items-center md:items-start mt-10  ">
             {iconimg && (
-              <div className="md:w-[177px] w-[150px] h-[153px] absolute top-0 -mt-14  ">
+              <AnimatedWrapper
+                from="bottom"
+                className="md:w-[177px] w-[150px] h-[153px] absolute top-0 -mt-14  "
+              >
                 <div className="w-full h-full relative ">
                   <Image
                     src={iconimg}
@@ -58,35 +64,37 @@ function PortfoliomainSection({
                     className="object-center object-contain"
                   />
                 </div>
-              </div>
+              </AnimatedWrapper>
             )}
-            <h3
-              className="text-center md:text-left font-bold lg:text-4xl tracking-wider"
-              style={{
-                lineHeight: 1.3,
-              }}
-            >
-              {heading}
-            </h3>
-            <div
-              className={`text-center md:text-start pr-6 font-medium ${bodycolor}`}
-            >
-              {body}
-            </div>
-            <Link href={href}>
-              <button className="uppercase font-Montserrat tracking-widest text-sm  px-10 py-5 rounded-md  font-semibold w-max border-2">
-                Know more
-              </button>
-            </Link>
+            <AnimatedWrapper from="bottom" initialY={50}>
+              <h3
+                className="text-center md:text-left font-bold lg:text-4xl tracking-wider"
+                style={{
+                  lineHeight: 1.3,
+                }}
+              >
+                {heading}
+              </h3>
+            </AnimatedWrapper>
+            <AnimatedWrapper from="bottom" initialY={50} amount={0.5}>
+              <div
+                className={`text-center md:text-start pr-6 font-medium text-2xl  ${bodycolor}`}
+              >
+                {body}
+              </div>
+            </AnimatedWrapper>
+            <AnimatedWrapper from="bottom" amount={0.8} delay={0.3}>
+              <Link href={href}>
+                <button
+                  className={`uppercase  ${custombutton} !text-white !font-Montserrat !tracking-widest !text-sm  !px-10 !py-5 !rounded-md  !font-semibold !w-max !border-2`}
+                >
+                  Know more
+                </button>
+              </Link>
+            </AnimatedWrapper>
           </div>
         </div>
-        <div
-          className="lg:w-[60%] xl:w-[55%] md:w-[80%] w-full absolute lg:top-0 xl:mt-16 lg:mt-20  top-full right-0  md:-mt-32 xl:mr-14 lg:mr-6 px-4 md:px-0 -mt-24"
-
-          // style={{
-          //   boxShadow: "0px 0px 40px 6px #0056F",
-          // }}
-        >
+        <div className="lg:w-[50%] xl:w-[50%] md:w-[80%] w-full absolute lg:top-0 xl:mt-16 lg:mt-20  top-full right-0  md:-mt-32 xl:mr-14 lg:mr-6 px-4 md:px-0 -mt-24">
           <div className=" relative lg:h-[600px] h-[430px] w-full">
             <Image
               src={mainimg}

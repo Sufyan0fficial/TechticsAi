@@ -5,10 +5,11 @@ import React from "react";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+import "@/components/button.css";
 
 function Footer() {
   return (
-    <div className="">
+    <div className="mb-20">
       <Container maxWidth="xl">
         <div
           className=" rounded-3xl  p-12"
@@ -117,7 +118,7 @@ function Footer() {
                   placeholder="Your Email"
                   className="py-3 bg-transparent pl-4 border-[1px] border-white focus:outline-none w-full flex-shrink-[0.7]"
                 />
-                <button className="uppercase text-white bg-gradient-to-br from-[#0056F8] to-[#45E7FF] md:px-8 px-6 md:py-2    py-3 mt-4 font-Montserrat tracking-widest rounded-sm ">
+                <button className=" button genbutton md:px-8 px-6 md:py-2 uppercase py-3 mt-4 font-Montserrat ">
                   Send
                 </button>
               </div>
