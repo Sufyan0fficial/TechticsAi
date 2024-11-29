@@ -77,8 +77,8 @@ export default function CarouselDemo() {
                   <Avatar
                     alt=""
                     src={manger.src}
-                    sx={{ width: "60%", height: "60%" }}
-                    className=" mt-2 ml-[6px]"
+                    sx={{ width: "70px", height: "70px" }}
+                    className=" mt-2 ml-[6px] aspect-square"
                   ></Avatar>
                   {/* <div className="relative w-[75px] h-[70px]">
                     <Image

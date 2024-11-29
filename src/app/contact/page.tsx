@@ -132,7 +132,7 @@ function ContactUs() {
                         className="object-contain object-center animate-pulse duration-1000"
                       />
                     </div>
-                    <AnimatedWrapper from="left" amount={1}>
+                    <AnimatedWrapper from="left">
                       <h3 className="lg:text-xl md:text-lg ">CALL US</h3>
                       <p className="text-[#B4B4B4] mt-2">+92 334 4598931</p>
                     </AnimatedWrapper>
@@ -147,7 +147,7 @@ function ContactUs() {
               amount={0.4}
               duration={1.5}
               scale={0.9}
-              className="xl:w-[50%] lg:w-[50%] w-full hover:border-4 border-yellow-400 "
+              className="xl:w-[50%] lg:w-[50%] w-full lg:hover:border-4 border-yellow-400 "
             >
               <div
                 className="w-full p-12 mt-16 lg:mt-0"

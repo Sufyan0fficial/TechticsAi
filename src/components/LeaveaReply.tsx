@@ -45,7 +45,7 @@ function LeaveaReply() {
             </textarea>
           </div>
         </div>
-        <button className="font-semibold button genbutton tracking-widest uppercase px-14 py-3  rounded-sm mt-6 lg:mt-2">
+        <button className="font-semibold button genbutton tracking-widest uppercase px-14 py-4 lg:text-[19px]  rounded-sm mt-6 lg:mt-2">
           Submit
         </button>
       </div>

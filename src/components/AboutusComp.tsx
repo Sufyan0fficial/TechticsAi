@@ -36,7 +36,7 @@ function AboutusComp() {
 
         <AnimatedWrapper from="bottom" duration={0.7} initialY={40}>
           <Link href="/Contactus">
-            <button className="button genbutton py-4 px-8 hover:border !tracking-widest uppercase">
+            <button className="button genbutton px-5 py-3 lg:py-4 lg:px-8 hover:border !tracking-widest uppercase">
               Know More
             </button>
           </Link>

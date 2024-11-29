@@ -112,13 +112,13 @@ function Footer() {
               <h4 className="font-Michroma   uppercase font-thin  mb-1 text-sm md:text-lg lg:text-xl">
                 Join our newsletter
               </h4>
-              <div className="flex md:flex-col items-baseline  gap-4  md:gap-0 md:items-end">
+              <div className="flex md:flex-col items-baseline  gap-4  md:gap-0 md:items-end ">
                 <input
                   type="text"
                   placeholder="Your Email"
                   className="py-3 bg-transparent pl-4 border-[1px] border-white focus:outline-none w-full flex-shrink-[0.7]"
                 />
-                <button className=" button genbutton md:px-8 px-6 md:py-2 uppercase py-3 mt-4 font-Montserrat ">
+                <button className=" button genbutton md:px-8 px-4 md:py-2 uppercase py-3 mt-4 font-Montserrat  flex-shrink-0">
                   Send
                 </button>
               </div>

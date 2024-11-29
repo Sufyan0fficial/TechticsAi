@@ -86,9 +86,12 @@ function Header() {
               Blogs
             </Link>
           </div>
-          <Link href="/contact" className="hidden lg:block">
-            <button className="button contactbutton py-4 px-10 !tracking-wider ">
-              <span className="pr-1 text-xl">☎</span> Consult Us
+          <Link href="/contact" className="hidden lg:block group">
+            <button className="button contactbutton py-4 px-10 !tracking-wider text-[19px] ">
+              <span className="pr-1 text-xl animate-pulse transition-all duration-1000 group-hover:animate-none">
+                ☎
+              </span>{" "}
+              Consult Us
             </button>
           </Link>
           <div className="block lg:hidden relative md:w-14 md:h-14 w-10 h-10">

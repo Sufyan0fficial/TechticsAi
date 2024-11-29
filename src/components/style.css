@@ -36,3 +36,15 @@
   opacity: 1;
   transform: scale(1) !important;
 }
+
+@media (min-width: 0px) {
+  .abouthero-customclass {
+    background-size: cover;
+  }
+}
+@media (min-width: 1280px) {
+  .abouthero-customclass {
+    background-size: contain;
+    mix-blend-mode: lighten;
+  }
+}

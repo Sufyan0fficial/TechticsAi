@@ -23,12 +23,12 @@ function AboutUs() {
           // height: "1080px",
           height: "calc(100vh - 96px)",
           width: "100%",
-          backgroundSize: "contain",
+          // backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          mixBlendMode: "lighten",
+          // mixBlendMode: "lighten",
         }}
-        className="flex justify-center items-start  overflow-hidden "
+        className="flex justify-center items-start  overflow-hidden abouthero-customclass"
       >
         <div className="flex flex-col justify-start items-center gap-8 relative mt-36 md:mt-20">
           <AnimatedWrapper

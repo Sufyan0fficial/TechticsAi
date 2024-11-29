@@ -65,7 +65,7 @@ const Data = [
 export default function SwiperCarousel() {
   return (
     <>
-      <Container maxWidth="xl" className="lg:mt-28">
+      <Container maxWidth="xl" className="mt-28">
         <Swiper
           loop={true}
           effect={"coverflow"}

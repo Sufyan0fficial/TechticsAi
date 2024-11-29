@@ -19,7 +19,7 @@ function OurProcess() {
 
   return (
     <div
-      className="pt-36 lg:pt-0  min-h-[400vh] flex justify-center items-start"
+      className=" lg:pt-0  min-h-[400vh] flex justify-center items-start"
       ref={ref}
     >
       <motion.div
