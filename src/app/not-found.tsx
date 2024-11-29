@@ -1,6 +1,7 @@
 import { Container } from "@mui/material";
 import heroimage from "../../public/heroimage.svg";
 import Link from "next/link";
+import AnimatedWrapper from "@/components/MotionWrapper";
 
 export default function NotFound() {
   return (
@@ -29,11 +30,13 @@ export default function NotFound() {
           <div className="uppercase font-Michroma md:text-4xl text-2xl text-center">
             Page not found
           </div>
-          <Link href="/">
-            <button className="px-8 py-[18px] tracking-widest uppercase button genbutton">
-              Back to home
-            </button>
-          </Link>
+          <AnimatedWrapper from="bottom">
+            <Link href="/">
+              <button className="px-8 py-[18px] tracking-widest uppercase button genbutton">
+                Back to home
+              </button>
+            </Link>
+          </AnimatedWrapper>
         </div>
       </Container>
     </div>
