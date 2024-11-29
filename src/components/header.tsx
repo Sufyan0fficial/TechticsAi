@@ -62,9 +62,9 @@ function Header() {
               About us
             </Link>
             <Link
-              href="/services"
+              href="/Services"
               className={`hover:text-[#45E7FF] transition-colors duration-500 ${
-                pathname === "/services" ? "text-[#45E7FF] " : ""
+                pathname === "/Services" ? "text-[#45E7FF] " : ""
               }`}
             >
               Services
@@ -122,7 +122,7 @@ function Header() {
               About us
             </Link>
             <Link
-              href="/services"
+              href="/Services"
               className="uppercase hover:text-[#45E7FF]"
               onClick={() => setclicked((pre) => !pre)}
             >

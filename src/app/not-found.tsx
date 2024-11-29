@@ -30,13 +30,7 @@ export default function NotFound() {
             Page not found
           </div>
           <Link href="/">
-            <button
-              style={{
-                background:
-                  "linear-gradient(111.77deg, #0056F8 33.94%, #45E7FF 80.93%)",
-              }}
-              className="px-10 py-3 tracking-widest uppercase"
-            >
+            <button className="px-8 py-[18px] tracking-widest uppercase button genbutton">
               Back to home
             </button>
           </Link>
