@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import { motion } from "motion/react";
 import mainImage from "../../public/mainImage2.svg";
 import innovative from "../../public/innovativelogo.svg";
 import neuro from "../../public/neurologo.svg";
@@ -46,10 +47,11 @@ function PortfoliomainSection({
       <div
         className={`bg-transparent border-4  rounded-3xl  px-10  w-full xl:pt-32 xl:pb-32 ${
           iconimg ? "xl:pt-28 xl:pb-24 lg:pt-40  md:pt-28 pt-24 " : ""
-        } lg:py-24 pt-16  pb-40 flex flex-col lg:relative md:w-[80%] lg:w-full `}
+        } lg:py-24 pt-16  pb-40 flex flex-col lg:flex-row  `}
       >
-        <div className="flex ">
-          <div className="lg:w-[45%]  flex flex-col gap-10 items-center md:items-start mt-10  ">
+        {/* Text Section */}
+        <div className="flex  lg:w-[50%] ">
+          <div className="lg:w-full  flex flex-col gap-10 items-center md:items-start mt-10 ">
             {iconimg && (
               <AnimatedWrapper
                 from="bottom"
@@ -94,17 +96,31 @@ function PortfoliomainSection({
             </AnimatedWrapper>
           </div>
         </div>
-        <div className="lg:w-[50%] xl:w-[50%] md:w-[80%] w-full absolute lg:top-0 xl:mt-16 lg:mt-20  top-full right-0  md:-mt-32 xl:mr-14 lg:mr-6 px-4 md:px-0 -mt-24">
-          <div className=" relative lg:h-[600px] h-[430px] w-full">
+
+        {/* Main Image Section */}
+        <div className="lg:w-[45%] h-full md:w-[80%] w-full absolute lg:top-0 lg:right-0  top-full right-0  md:-mt-48 px-4 md:px-0 -mt-36  lg:-mt-28  ">
+          <motion.div
+            className=" relative w-full lg:h-full h-[500px]"
+            animate={{
+              y: [0, -25, 0], // Move up, then down
+
+              // rotate: [0, 5, -5, 0], // Slight rotation
+              transition: {
+                duration: 4, // Time for one complete cycle
+                ease: "easeInOut",
+                repeat: Infinity, // Keep looping
+              },
+            }}
+          >
             <Image
               src={mainimg}
               alt="image"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="object-center object-cover rounded-2xl"
+              className="object-center object-cover  rounded-2xl"
             />
-          </div>
-          <div className="w-full md:pr-2 mt-6 lg:hidden flex flex-col md:items-end items-center justify-center ">
+          </motion.div>
+          <div className="w-full md:pr-2 mt-6 lg:hidden flex flex-col items-center justify-center ">
             <div
               className="uppercase text-[#FEFC51] tracking-widest mb-4 text-sm font-semibold"
               style={{

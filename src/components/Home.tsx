@@ -423,10 +423,9 @@ function Home() {
               </AnimatedWrapper>
             </div>
             <AnimatedWrapper
-              // scale={1.2}
               amount={0.8}
               from="bottom"
-              className="w-full flex justify-center items-center animate-pulse"
+              className="w-full flex justify-center items-center "
             >
               <div className="relative w-[250px] h-[250px] md:h-[px] lg:w-[280px] lg:h-[300px] min-[1400px]:h-[406px] md:-mt-9 -mb-6  lg:-mt-0 mt-10 ">
                 <Image
